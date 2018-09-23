@@ -1,0 +1,35 @@
+.App-header {
+    background-color: #222222;
+    color: white;
+    text-align: right;
+    padding: 10px 60px;
+    word-spacing: 30px;
+    font-size: 24px;
+}
+
+.App-header a {
+    color: dimgray;
+    text-decoration: none;
+    padding-left: 15px;
+}
+
+.App-header a:hover, a.active {
+    color: whitesmoke;
+    text-decoration: underline;
+    text-shadow: 0 0 10px white;
+}
+
+.App-footer {
+    bottom: 0;
+    margin-bottom: 20px;
+}
+.App-footer a {
+    color: black;
+    text-decoration: underline;
+}
+
+.footer-linkBlock {
+    display: inline-block;
+    font-size: 16px;
+    padding: 10px;
+}
