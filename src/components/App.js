@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Route, HashRouter, Link } from 'react-router-dom';
+import { Menu, Segment, Divider, Grid } from 'semantic-ui-react';
 
 import Bio from './Bio';
 import Projects from './Projects';
@@ -20,10 +21,28 @@ class App extends Component {
 
   renderHeader() {
     return (
-      <header className="App-header">
-          <a href='/' className='active'>Bio</a>
-          <a href='/projects'>Projects</a>
-      </header>
+      <Segment inverted>
+        <Grid columns={2}>
+          <Grid.Column className='header-title'>
+            Does Stuff
+          </Grid.Column>
+          <Grid.Column>
+            <Menu pointing secondary inverted>
+              <Menu.Menu position='right'>
+                <Menu.Item active name='bio' />
+                <Menu.Item name='skills' />
+                <Menu.Item name='timeline' />
+                <div className='divider' />
+                <Menu.Item name='projects' />
+                <div className='divider' />
+                <Menu.Item name='contact' />
+              </Menu.Menu>
+            </Menu>
+          </Grid.Column>
+        </Grid>
+        
+      </Segment>
+      
     )
   }
 

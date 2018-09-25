@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Person from '../data/Person';
-import { Header, List, Grid, Image } from 'semantic-ui-react';
+import { Header, List, Grid, Image, Icon, Segment, Container } from 'semantic-ui-react';
 import '../css/bio.css';
 
 class Bio extends Component {
@@ -8,49 +8,79 @@ class Bio extends Component {
     render() {
         return (
             <div className='page-bio'>
-                <h1>{ Person.name }</h1>
+                { this.renderName() }
                 { this.renderAbout() }
-                <Grid relaxed columns={2} style={{'margin-top': '30px'}}>
-                    <Grid.Column>{ this.renderSkills() }</Grid.Column>
-                    <Grid.Column>{ this.renderImage() }</Grid.Column>
-                </Grid>
+                { this.renderSkills() }
+                { this.renderTimeline() }
             </div>
+        );
+    }
+
+    renderName() {
+        return (
+            <Container textAlign='center'>
+                <Grid stackable columns={2}>
+                    <Grid.Column>
+                        <Header as='h1' className='name-name' color='grey inverted'>
+                            <span className='person-name'>{ Person.name }</span>
+                            <Header.Subheader>{ Person.title }</Header.Subheader>
+                        </Header>
+                    </Grid.Column>
+                    <Grid.Column>
+                        <Header as='h4' className='name-location' color='grey inverted'><Icon name='map marker'/>Boulder, CO</Header>
+                    </Grid.Column>
+                </Grid>
+            </Container>
         );
     }
 
     renderAbout() {
         return (
-            <div>  
+            <Segment inverted>
                 { Person.description.map(paragraph => 
-                    <p>{ paragraph }</p>
+                    <p className='about-section'>{ paragraph }</p>
                 )}
-            </div>
+            </Segment>
         )
     }
 
     renderSkills() {
         return (
-            <div>
-                <Header as='h2'>Skills</Header>
-                <Grid columns={3}>
-                    { Person.skills.map(skill => 
-                        <Grid.Column>
-                            <Header as="h4">{skill.category}</Header>
-                            <List bulleted>
-                                { skill.skills.map(s =>
-                                    <List.Item>{ s }</List.Item>
-                                )}
-                            </List>
-                        </Grid.Column>
-                    )}
-                </Grid>
-            </div>
+            <Grid relaxed stackable columns={2}>
+                <Grid.Column>
+                    <Segment inverted className='skill-section'>
+                        <Header as='h2' inverted>Skills</Header>
+                        <Grid columns={3}>
+                        { Person.skills.map(skill => 
+                            <Grid.Column>
+                                <Header as="h4" inverted>{skill.category}</Header>
+                                <List bulleted>
+                                    { skill.skills.map(s =>
+                                        <List.Item>{ s }</List.Item>
+                                    )}
+                                </List>
+                            </Grid.Column>
+                        )}
+                        </Grid>
+                    </Segment>
+                </Grid.Column>
+                <Grid.Column>{ this.renderImage() }</Grid.Column>
+            </Grid>
         )
     }
 
     renderImage() {
         return (
-            <Image className='profile-image' src='https://avatars0.githubusercontent.com/u/30422493' size='medium' circular />
+            <Image className='profile-image' src='https://avatars0.githubusercontent.com/u/30422493' size='medium' circular centered />
+        )
+    }
+
+    renderTimeline() {
+        return (
+            <Segment inverted>
+                <Header as="h2" inverted>Timeline</Header>
+                
+            </Segment>
         )
     }
 }
