@@ -5,6 +5,7 @@ import { Menu, Segment, Divider, Grid } from 'semantic-ui-react';
 import Header from './Header';
 import Bio from './Bio';
 import Projects from './Projects';
+import Contact from './Contact';
 import Footer from './Footer';
 
 import '../css/app.css';

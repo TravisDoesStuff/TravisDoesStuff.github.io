@@ -1,21 +1,26 @@
 import React, { Component } from 'react';
-import { Menu, Segment, Divider, Grid, Dropdown, Responsive } from 'semantic-ui-react';
+import { Route, HashRouter, Link } from 'react-router-dom';
+import { Menu, Segment, Grid, Dropdown, Responsive } from 'semantic-ui-react';
 
 const menuItems = {};
 
 class Header extends Component {
-    render() {
+    state = { activeItem: 'bio' };
+
+    render = () => {
+        let activeItem = this.state.activeItem;
+
         return (
             <Segment inverted>
                 <Grid columns={2}>
                     <Grid.Column className='header-title'>
-                        Does Stuff
+                        Doing Things
                     </Grid.Column>
                     <Grid.Column>
                         <Responsive minWidth='799'>
                             <Menu pointing secondary inverted>
                                 <Menu.Menu position='right'>
-                                    <Menu.Item active name='bio' />
+                                    <Menu.Item active={ activeItem } name={ activeItem } onClick={ this.handleMenuClick() } />
                                     <Menu.Item name='skills' />
                                     <Menu.Item name='timeline' />
                                     <div className='divider' />
@@ -43,6 +48,10 @@ class Header extends Component {
                 </Grid>
             </Segment>
         )
+    }
+
+    handleMenuClick = (e) => {
+        
     }
 }
 

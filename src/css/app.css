@@ -18,6 +18,12 @@
     margin: auto;
 }
 
+.mobile-menu {
+    left: auto;
+    right: 0;
+    z-index: 1;
+}
+
 .App-footer a {
     color: white;
 }

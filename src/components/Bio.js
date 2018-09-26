@@ -11,6 +11,7 @@ class Bio extends Component {
                 { this.renderName() }
                 { this.renderAbout() }
                 { this.renderSkills() }
+                { this.renderQuote() }
                 { this.renderTimeline() }
             </Container>
         );
@@ -75,6 +76,14 @@ class Bio extends Component {
     renderImage() {
         return (
             <Image className='profile-image' src='https://avatars0.githubusercontent.com/u/30422493' size='medium' circular centered />
+        )
+    }
+
+    renderQuote() {
+        return (
+            <div className='quote-section' >
+                To me, software development is a creative art given a set of tools, and knowing when to use them.
+            </div>
         )
     }
 
