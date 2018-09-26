@@ -1,24 +1,24 @@
 import React, { Component } from 'react';
 import Person from '../data/Person';
-import { Header, List, Grid, Image, Icon, Segment, Container } from 'semantic-ui-react';
+import { Header, List, Grid, Image, Icon, Segment, Container, Responsive } from 'semantic-ui-react';
 import '../css/bio.css';
 
 class Bio extends Component {
 
     render() {
         return (
-            <div className='page-bio'>
+            <Container className='page-bio'>
                 { this.renderName() }
                 { this.renderAbout() }
                 { this.renderSkills() }
                 { this.renderTimeline() }
-            </div>
+            </Container>
         );
     }
 
     renderName() {
         return (
-            <Container textAlign='center'>
+            <Container textAlign='center' className='name-section'>
                 <Grid stackable columns={2}>
                     <Grid.Column>
                         <Header as='h1' className='name-name' color='grey inverted'>
@@ -30,6 +30,9 @@ class Bio extends Component {
                         <Header as='h4' className='name-location' color='grey inverted'><Icon name='map marker'/>Boulder, CO</Header>
                     </Grid.Column>
                 </Grid>
+                <Responsive maxWidth='800' style={{ 'margin-top': '20px' }}>
+                    { this.renderImage() }
+                </Responsive>
             </Container>
         );
     }
@@ -64,7 +67,7 @@ class Bio extends Component {
                         </Grid>
                     </Segment>
                 </Grid.Column>
-                <Grid.Column>{ this.renderImage() }</Grid.Column>
+                <Grid.Column><Responsive minWidth='799'>{ this.renderImage() }</Responsive></Grid.Column>
             </Grid>
         )
     }
