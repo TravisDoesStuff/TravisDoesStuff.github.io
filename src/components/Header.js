@@ -14,7 +14,7 @@ class Header extends Component {
             <Segment inverted>
                 <Grid columns={2}>
                     <Grid.Column className='header-title'>
-                        Doing Things
+                        Does Stuff
                     </Grid.Column>
                     <Grid.Column>
                         <Responsive minWidth='799'>

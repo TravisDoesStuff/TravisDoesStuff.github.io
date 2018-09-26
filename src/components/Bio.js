@@ -3,6 +3,8 @@ import Person from '../data/Person';
 import { Header, List, Grid, Image, Icon, Segment, Container, Responsive } from 'semantic-ui-react';
 import '../css/bio.css';
 
+import Timeline from './Timeline';
+
 class Bio extends Component {
 
     render() {
@@ -82,7 +84,7 @@ class Bio extends Component {
     renderQuote() {
         return (
             <div className='quote-section' >
-                To me, software development is a creative art given a set of tools, and knowing when to use them.
+                { Person.quote }
             </div>
         )
     }
@@ -90,8 +92,7 @@ class Bio extends Component {
     renderTimeline() {
         return (
             <Segment inverted>
-                <Header as="h2" inverted>Timeline</Header>
-                
+                <Timeline />
             </Segment>
         )
     }
