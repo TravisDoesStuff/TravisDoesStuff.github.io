@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Route, HashRouter, Link } from 'react-router-dom';
-import { Menu, Segment, Divider, Grid } from 'semantic-ui-react';
+import { Route, HashRouter, Switch } from 'react-router-dom';
+import { Sticky } from 'semantic-ui-react';
 
 import Header from './Header';
 import Bio from './Bio';
@@ -23,13 +23,21 @@ class App extends Component {
 
   renderHeader() {
     return (
-      <Header />
+      <Sticky>
+        <Header />
+      </Sticky>
     )
   }
 
   renderBody() {
     return (
-      <Bio />
+      <HashRouter>
+        <Switch>
+          <Route exact path="/" component={Bio} />
+          <Route exact path="/projects" component={Projects} />
+          <Route path="/contact" component={Contact} />
+        </Switch>
+      </HashRouter>
     )
   }
 

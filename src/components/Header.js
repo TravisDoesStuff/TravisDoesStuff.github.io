@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
-import { Route, HashRouter, Link } from 'react-router-dom';
+import { HashRouter, Link } from 'react-router-dom';
 import { Menu, Segment, Grid, Dropdown, Responsive } from 'semantic-ui-react';
 
-const menuItems = {};
+const menuItems = [
+    { key:'', name:'bio', link:'/' },
+    { key:'', name:'projects', link:'/projects' },
+    { key:'', name:'contact', link:'/contact' }
+]
 
 class Header extends Component {
     state = { activeItem: 'bio' };
@@ -20,13 +24,16 @@ class Header extends Component {
                         <Responsive minWidth='799'>
                             <Menu pointing secondary inverted>
                                 <Menu.Menu position='right'>
-                                    <Menu.Item active={ activeItem } name={ activeItem } onClick={ this.handleMenuClick() } />
-                                    <Menu.Item name='skills' />
-                                    <Menu.Item name='timeline' />
-                                    <div className='divider' />
-                                    <Menu.Item name='projects' />
-                                    <div className='divider' />
-                                    <Menu.Item name='contact' />
+                                    { menuItems.map( menuItem =>
+                                        <HashRouter>
+                                            <Menu.Item
+                                                active={ activeItem===menuItem.name }
+                                                name={ menuItem.name }
+                                                onClick={ this.handleMenuClick }
+                                                as={Link}
+                                                to={ menuItem.link } />
+                                        </HashRouter>
+                                    )}
                                 </Menu.Menu>
                             </Menu>
                         </Responsive>
@@ -34,13 +41,11 @@ class Header extends Component {
                         <Responsive maxWidth='800'>
                             <Dropdown item icon='bars' position='right'>
                                 <Dropdown.Menu style={{ left:'auto', right:0 }}>
-                                    <Dropdown.Item>Bio</Dropdown.Item>
-                                    <Dropdown.Item>Skills</Dropdown.Item>
-                                    <Dropdown.Item>Timeline</Dropdown.Item>
-                                    <Dropdown.Divider />
-                                    <Dropdown.Item>Projects</Dropdown.Item>
-                                    <Dropdown.Divider />
-                                    <Dropdown.Item>Contact</Dropdown.Item>
+                                    { menuItems.map( menuItem =>
+                                        <HashRouter>
+                                            <Dropdown.Item active={ activeItem===menuItem.name } name={ menuItem.name } onClick={ this.handleMenuClick } as={Link} to={ menuItem.link }>{ menuItem.name }</Dropdown.Item>
+                                        </HashRouter>
+                                    )}
                                 </Dropdown.Menu>
                             </Dropdown>
                         </Responsive>
@@ -50,8 +55,8 @@ class Header extends Component {
         )
     }
 
-    handleMenuClick = (e) => {
-        
+    handleMenuClick = (e, {name}) => {
+        this.setState({ activeItem: name });
     }
 }
 

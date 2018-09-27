@@ -30,10 +30,10 @@ class Bio extends Component {
                         </Header>
                     </Grid.Column>
                     <Grid.Column>
-                        <Header as='h4' className='name-location' color='grey inverted'><Icon name='map marker'/>Boulder, CO</Header>
+                        <Header as='h4' className='name-location' color='grey inverted'><Icon name='map marker'/>{ Person.location }</Header>
                     </Grid.Column>
                 </Grid>
-                <Responsive maxWidth='800' style={{ 'margin-top': '20px' }}>
+                <Responsive maxWidth='801' style={{ 'margin-top': '20px' }}>
                     { this.renderImage() }
                 </Responsive>
             </Container>
@@ -43,7 +43,7 @@ class Bio extends Component {
     renderAbout() {
         return (
             <Segment inverted>
-                { Person.description.map(paragraph => 
+                { Person.description.map( paragraph => 
                     <p className='about-section'>{ paragraph }</p>
                 )}
             </Segment>
@@ -59,9 +59,9 @@ class Bio extends Component {
                         <Grid columns={3}>
                         { Person.skills.map(skill => 
                             <Grid.Column>
-                                <Header as="h4" inverted>{skill.category}</Header>
+                                <Header as="h4" inverted>{ skill.category }</Header>
                                 <List bulleted>
-                                    { skill.skills.map(s =>
+                                    { skill.skills.map( s =>
                                         <List.Item>{ s }</List.Item>
                                     )}
                                 </List>
@@ -70,7 +70,7 @@ class Bio extends Component {
                         </Grid>
                     </Segment>
                 </Grid.Column>
-                <Grid.Column><Responsive minWidth='799'>{ this.renderImage() }</Responsive></Grid.Column>
+                <Grid.Column><Responsive minWidth='800'>{ this.renderImage() }</Responsive></Grid.Column>
             </Grid>
         )
     }
