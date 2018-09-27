@@ -38,7 +38,7 @@ class Header extends Component {
                             </Menu>
                         </Responsive>
                         
-                        <Responsive maxWidth='800'>
+                        <Responsive maxWidth='800' style={{float: 'right'}}>
                             <Dropdown item icon='bars' position='right'>
                                 <Dropdown.Menu style={{ left:'auto', right:0 }}>
                                     { menuItems.map( menuItem =>
