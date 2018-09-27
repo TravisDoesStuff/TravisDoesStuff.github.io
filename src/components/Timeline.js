@@ -1,34 +1,55 @@
 import React, { Component } from 'react';
-import { Header, Accordion, Icon, List } from 'semantic-ui-react';
+import { Header, Accordion, Icon, List, Container } from 'semantic-ui-react';
 
 import Person from '../data/Person';
 
 class Timeline extends Component {
+    state = { activeItem: '' };
+
     render() {
+        let activeItem = this.state.activeItem;
+
         return (
             <div>
                 <Header as='h2' inverted>Timeline</Header>
-                <List as='ul' inverted>
-                    { Person.history.map( date =>
-                    <List.Item>
-                        <Icon name={ date.icon } inverted />
-                        <List.Content>
-                            <List.Header style={{ width: '100%' }}>
-                                { date.title }
-                                <List.Content floated='right'>{ date.startDate } - { date.endDate }</List.Content>
-                            </List.Header>
-                            <List.Description>{ date.description} </List.Description>
-                            <List.List>
-                                { date.tasks.map( task =>
-                                    <List.Item as='ul'>{ task }</List.Item>
-                                )}
-                            </List.List>
-                        </List.Content>
-                    </List.Item>
-                    )}
-                </List>
+                <Container className='segment-content'>
+                { Person.history.map( date =>
+                    <Accordion inverted>
+
+                        <Accordion.Title title={ date.title } onClick={ this.handleClick } active={ activeItem === date.title } style={{ 'font-size': '16px', 'font-weight': 'bold' }}>
+                            <Icon name='dropdown' />
+                            <Icon name={ date.icon } inverted />
+                            { date.startDate } - { date.endDate } -- { date.title }
+                        </Accordion.Title>
+
+                        <Accordion.Content active={ activeItem === date.title }>
+                            <Container style={{padding: '0 20px'}}>
+                                { date.description }
+                                <Container style={{padding: '10px 20px'}}>
+                                    <List bulleted>
+                                    { date.tasks.map( task =>
+                                        <List.Item>{ task }</List.Item>
+                                    )}
+                                    </List>
+                                </Container>
+                            </Container>
+                        </Accordion.Content>
+
+                    </Accordion>
+                )}
+                </Container>
             </div>
         );
+    }
+
+    handleClick = (e, {title}) => {
+        let activeSegment = this.state.activeItem;
+
+        if(activeSegment === title){
+            this.setState({ activeItem: '' });
+        } else {
+            this.setState({ activeItem: title });
+        }
     }
 }
 

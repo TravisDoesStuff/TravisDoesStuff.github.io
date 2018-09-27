@@ -56,18 +56,20 @@ class Bio extends Component {
                 <Grid.Column>
                     <Segment inverted className='skill-section'>
                         <Header as='h2' inverted>Skills</Header>
-                        <Grid columns={3}>
-                        { Person.skills.map(skill => 
-                            <Grid.Column>
-                                <Header as="h4" inverted>{ skill.category }</Header>
-                                <List bulleted>
-                                    { skill.skills.map( s =>
-                                        <List.Item>{ s }</List.Item>
-                                    )}
-                                </List>
-                            </Grid.Column>
-                        )}
-                        </Grid>
+                        <Container className='segment-content'>
+                            <Grid columns={3}>
+                            { Person.skills.map(skill => 
+                                <Grid.Column>
+                                    <Header as="h4" inverted>{ skill.category }</Header>
+                                    <List bulleted>
+                                        { skill.skills.map( s =>
+                                            <List.Item>{ s }</List.Item>
+                                        )}
+                                    </List>
+                                </Grid.Column>
+                            )}
+                            </Grid>
+                        </Container>
                     </Segment>
                 </Grid.Column>
                 <Grid.Column><Responsive minWidth='800'>{ this.renderImage() }</Responsive></Grid.Column>

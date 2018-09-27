@@ -38,6 +38,10 @@
     opacity: 0.8;
 }
 
+.segment-content {
+    padding: 0 15px;
+}
+
 /* Semantic UI, vertical divider bug workaround */
 .divider {
     left: 50%;

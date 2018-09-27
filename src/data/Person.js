@@ -36,7 +36,7 @@ const Person = {
         {
             category: 'Tools',
             skills: [
-                'Git/Github',
+                'Git / Github',
                 'Postman',
                 'AWS',
                 'Photoshop'
@@ -65,7 +65,8 @@ const Person = {
             icon: 'graduation cap',
             description: 'BS in Information Technology; Minors in Computer Science, and Business',
             tasks: [
-                
+                'Dean\'s List',
+                'Missouri Computing Association'
             ]
         },
         {
@@ -73,7 +74,7 @@ const Person = {
             endDate: 'May 2011',
             title: 'Richland Community College',
             icon: 'book',
-            description: '',
+            description: 'General Education, transfer to MU later.',
             tasks: [
                 
             ]
