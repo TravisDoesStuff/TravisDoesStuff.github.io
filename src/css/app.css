@@ -42,6 +42,10 @@
     padding: 0 15px;
 }
 
+.App-Space {
+    min-height: 200px;
+}
+
 /* Semantic UI, vertical divider bug workaround */
 .divider {
     left: 50%;
