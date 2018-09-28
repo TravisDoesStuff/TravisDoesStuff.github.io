@@ -42,7 +42,7 @@ class Bio extends Component {
 
     renderAbout() {
         return (
-            <Segment inverted>
+            <Segment inverted className='opaque'>
                 { Person.description.map( paragraph => 
                     <p className='about-section'>{ paragraph }</p>
                 )}
@@ -54,7 +54,7 @@ class Bio extends Component {
         return (
             <Grid relaxed stackable columns={2}>
                 <Grid.Column>
-                    <Segment inverted className='skill-section'>
+                    <Segment inverted className='skill-section opaque'>
                         <Header as='h2' inverted>Skills</Header>
                         <Container className='segment-content'>
                             <Grid columns={3}>
@@ -93,7 +93,7 @@ class Bio extends Component {
 
     renderTimeline() {
         return (
-            <Segment inverted>
+            <Segment inverted className='opaque'>
                 <Timeline />
             </Segment>
         )

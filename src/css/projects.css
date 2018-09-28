@@ -1,0 +1,31 @@
+.page-projects {
+    margin: 30px auto;
+}
+
+.container-project-title {
+    padding: 35px;
+}
+
+.projects-header {
+    margin-bottom: 30px;
+}
+
+.project-title {
+    font-size: 1.5em;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+.projects-section {
+    padding: 10px 0;
+    opacity: 1;
+}
+
+.card-project {
+    opacity: 1;
+}
+
+.project-image {
+    height: 200px;
+    background: transparent no-repeat center;
+    background-size: cover;
+}
