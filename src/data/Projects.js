@@ -23,7 +23,7 @@ const Projects = {
             meta: 'Procedural Generation',
             description: 'Utilizes the Square-Diamond Algorithm with a touch of my own mathematics to generate terrain.',
             link: 'https://travisdoesstuff.github.io/TerrainGenerator/',
-            image: 'https://github.com/TravisDoesStuff/TerrainGenerator/raw/master/coolTerrain.png',
+            image: 'https://github.com/TravisDoesStuff/TerrainGenerator/raw/master/coolTerrain.jpg',
             githubLink: 'https://github.com/TravisDoesStuff/TerrainGenerator',
             githubTitle: 'TravisDoesStuff/TerrainGenerator'
         },
