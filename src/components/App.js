@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Route, HashRouter, Switch } from 'react-router-dom';
-import { Sticky } from 'semantic-ui-react';
 
 import Header from './Header';
 import Bio from './Bio';
@@ -24,9 +23,7 @@ class App extends Component {
 
   renderHeader() {
     return (
-      <Sticky>
-        <Header />
-      </Sticky>
+      <Header />
     )
   }
 

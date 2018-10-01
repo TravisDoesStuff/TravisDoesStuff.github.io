@@ -43,7 +43,7 @@
 }
 
 .App-Space {
-    min-height: 200px;
+    min-height: 100px;
 }
 
 /* Semantic UI, vertical divider bug workaround */
