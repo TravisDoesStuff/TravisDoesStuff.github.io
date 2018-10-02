@@ -16,7 +16,7 @@ class Timeline extends Component {
                 { Person.history.map( date =>
                     <Accordion inverted>
 
-                        <Accordion.Title title={ date.title } onClick={ this.handleClick } active={ activeItem === date.title } style={{ 'font-size': '16px', 'font-weight': 'bold' }}>
+                        <Accordion.Title title={ date.title } onClick={ this.handleClick } active={ activeItem === date.title } style={{ 'fontSize': '16px', 'fontWeight': 'bold' }}>
                             <Icon name='dropdown' />
                             <Icon name={ date.icon } inverted />
                             { date.startDate } - { date.endDate } -- { date.title }

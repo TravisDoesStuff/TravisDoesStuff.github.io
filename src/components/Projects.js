@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Header, Card, Icon, Segment, Image } from 'semantic-ui-react';
+import { Container, Header, Card, Icon, Segment } from 'semantic-ui-react';
 import '../css/projects.css';
 
 import ProjectList from '../data/Projects';
@@ -19,7 +19,6 @@ class Projects extends Component {
             <Container textAlign='center' className='projects-header'>
                 <Header as='h1' color='grey inverted'>
                     <span className='project-title'>Projects</span>
-                    <Header.Subheader>Lots and lots of iterations!</Header.Subheader>
                 </Header>
             </Container>
         );
@@ -32,7 +31,7 @@ class Projects extends Component {
                     { ProjectList.projects.map( project => 
                         <Card>
                             <a href={ project.link } target='_'>
-                                <div style={{ 'background-image': 'url('+project.image+')' }} className='project-image' />
+                                <div style={{ 'backgroundImage': 'url('+project.image+')' }} className='project-image' />
                             </a>
                             <Card.Content>
                                 <Card.Header>{ project.title }</Card.Header>

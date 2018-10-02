@@ -15,7 +15,6 @@ class App extends Component {
       <div className="App">
         { this.renderHeader() }
         { this.renderBody() }
-        { this.renderSpace() }
         { this.renderFooter() }
       </div>
     );
@@ -36,13 +35,6 @@ class App extends Component {
           <Route path="/contact" component={Contact} />
         </Switch>
       </HashRouter>
-    )
-  }
-
-  renderSpace() {
-    return(
-      <div className='App-Space'>
-      </div>
     )
   }
 

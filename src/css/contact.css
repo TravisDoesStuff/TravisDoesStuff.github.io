@@ -16,9 +16,13 @@
 }
 
 .segment-form {
-    max-width: 800px;
+    margin: 20px 20%;
 }
 
 .form-contact {
-    padding: 10px 30px;
+    padding: 10px 10%;
+}
+
+.Contact-space {
+    min-height: 200px;
 }
