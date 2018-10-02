@@ -53,6 +53,10 @@ html, body {
     padding: 0 15px;
 }
 
+.title {
+    color: white;
+}
+
 /* Semantic UI, vertical divider bug workaround */
 .divider {
     left: 50%;

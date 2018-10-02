@@ -13,8 +13,8 @@ class Timeline extends Component {
             <div>
                 <Header as='h2' inverted>Timeline</Header>
                 <Container className='segment-content'>
-                { Person.history.map( date =>
-                    <Accordion inverted>
+                { Person.history.map((date,d) =>
+                    <Accordion inverted key={d}>
 
                         <Accordion.Title title={ date.title } onClick={ this.handleClick } active={ activeItem === date.title } style={{ 'fontSize': '16px', 'fontWeight': 'bold' }}>
                             <Icon name='dropdown' />
@@ -27,8 +27,8 @@ class Timeline extends Component {
                                 { date.description }
                                 <Container style={{padding: '10px 20px'}}>
                                     <List bulleted>
-                                    { date.tasks.map( task =>
-                                        <List.Item>{ task }</List.Item>
+                                    { date.tasks.map((task,t) =>
+                                        <List.Item key={t}>{ task }</List.Item>
                                     )}
                                     </List>
                                 </Container>

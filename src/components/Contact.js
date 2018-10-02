@@ -39,8 +39,8 @@ class Contact extends Component {
     renderTitle() {
         return (
             <Container textAlign='center' className='container-contact-title'>
-                <Header as='h1' color='grey inverted'>
-                    <span className='contact-title'>Contact Me</span>
+                <Header as='h1'>
+                    <span className='contact-title title'>Contact Me</span>
                 </Header>
             </Container>
         );

@@ -7,9 +7,7 @@ const Person = {
         "I have 3.5 developing web-based applications. Many of the products being made are utilizing modern web frameworks such as React.js and Laravel-Lumen. On my own time I am learning different technologies such as mobile development in order to utilize on-board sensors and external internet services.",
         "In my spare time I enjoy playing video games and exploring the world, whether its enjoying the outdoors or getting to know the local spots."
     ],
-    quote: [
-        "To me, software development is a creative art given a set of tools, and knowing when to use them."
-    ],
+    quote: "To me, software development is a creative art given a set of tools, and knowing when to use them.",
     skills: [
         {
             category: 'Languages',

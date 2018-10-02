@@ -24,13 +24,13 @@ class Bio extends Component {
             <Container textAlign='center' className='name-section'>
                 <Grid stackable columns={2}>
                     <Grid.Column>
-                        <Header as='h1' className='name-name' color='grey inverted'>
-                            <span className='person-name'>{ Person.name }</span>
-                            <Header.Subheader>{ Person.title }</Header.Subheader>
+                        <Header as='h1'>
+                            <span className='person-name title'>{ Person.name }</span>
+                            <Header.Subheader><span  className='title'>{ Person.title }</span></Header.Subheader>
                         </Header>
                     </Grid.Column>
                     <Grid.Column>
-                        <Header as='h4' className='name-location' color='grey inverted'><Icon name='map marker'/>{ Person.location }</Header>
+                        <Header as='h4'><span className='title'><Icon name='map marker'/>{ Person.location }</span></Header>
                     </Grid.Column>
                 </Grid>
                 <Responsive maxWidth='801' style={{ 'margin-top': '20px' }}>
@@ -43,8 +43,8 @@ class Bio extends Component {
     renderAbout() {
         return (
             <Segment inverted className='opaque'>
-                { Person.description.map( paragraph => 
-                    <p className='about-section'>{ paragraph }</p>
+                { Person.description.map((paragraph,p) => 
+                    <p className='about-section' key={p}>{ paragraph }</p>
                 )}
             </Segment>
         )
@@ -58,12 +58,12 @@ class Bio extends Component {
                         <Header as='h2' inverted>Skills</Header>
                         <Container className='segment-content'>
                             <Grid columns={3}>
-                            { Person.skills.map(skill => 
-                                <Grid.Column>
+                            { Person.skills.map((skill,s) => 
+                                <Grid.Column key={s}>
                                     <Header as="h4" inverted>{ skill.category }</Header>
                                     <List bulleted>
-                                        { skill.skills.map( s =>
-                                            <List.Item>{ s }</List.Item>
+                                        { skill.skills.map((skl,i) =>
+                                            <List.Item key={i}>{ skl }</List.Item>
                                         )}
                                     </List>
                                 </Grid.Column>

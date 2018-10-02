@@ -8,8 +8,8 @@ class Footer extends Component {
     render() {
         return (
             <Segment inverted textAlign='center' className='App-footer'>
-                { Links.links.map(link =>
-                    <div className="footer-linkBlock"><a href={ link.link } target='_blank'><Icon link name={ link.icon } />{ link.name }</a></div>
+                { Links.links.map((link,l) =>
+                    <div className="footer-linkBlock" key={l}><a href={ link.link } target='_blank'><Icon link name={ link.icon } />{ link.name }</a></div>
                 )}
             </Segment>
         )

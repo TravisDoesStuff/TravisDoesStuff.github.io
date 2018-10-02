@@ -17,8 +17,8 @@ class Projects extends Component {
     renderTitle() {
         return (
             <Container textAlign='center' className='projects-header'>
-                <Header as='h1' color='grey inverted'>
-                    <span className='project-title'>Projects</span>
+                <Header as='h1'>
+                    <span className='project-title title'>Projects</span>
                 </Header>
             </Container>
         );
@@ -28,8 +28,8 @@ class Projects extends Component {
         return(
             <Segment inverted className='opaque'>
                 <Card.Group centered className='projects-section'>
-                    { ProjectList.projects.map( project => 
-                        <Card>
+                    { ProjectList.projects.map((project,p) => 
+                        <Card key={p}>
                             <a href={ project.link } target='_'>
                                 <div style={{ 'backgroundImage': 'url('+project.image+')' }} className='project-image' />
                             </a>

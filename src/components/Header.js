@@ -24,8 +24,8 @@ class Header extends Component {
                         <Responsive minWidth='799'>
                             <Menu pointing secondary inverted>
                                 <Menu.Menu position='right'>
-                                    { menuItems.map( menuItem =>
-                                        <HashRouter>
+                                    { menuItems.map((menuItem,m) =>
+                                        <HashRouter key={m}>
                                             <Menu.Item
                                                 active={ activeItem===menuItem.name }
                                                 name={ menuItem.name }
@@ -41,8 +41,8 @@ class Header extends Component {
                         <Responsive maxWidth='800' style={{float: 'right'}}>
                             <Dropdown item icon='bars' position='right'>
                                 <Dropdown.Menu style={{ left:'auto', right:0 }}>
-                                    { menuItems.map( menuItem =>
-                                        <HashRouter>
+                                    { menuItems.map((menuItem,m) =>
+                                        <HashRouter key={m}>
                                             <Dropdown.Item active={ activeItem===menuItem.name } name={ menuItem.name } onClick={ this.handleMenuClick } as={Link} to={ menuItem.link }>{ menuItem.name }</Dropdown.Item>
                                         </HashRouter>
                                     )}
