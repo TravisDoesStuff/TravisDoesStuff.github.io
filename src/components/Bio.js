@@ -6,31 +6,54 @@ import '../css/bio.css';
 import Timeline from './Timeline';
 
 class Bio extends Component {
-
-    render() {
-        return (
-            <Container className='page-bio'>
-                { this.renderName() }
-                { this.renderAbout() }
-                { this.renderSkills() }
-                { this.renderQuote() }
-                { this.renderTimeline() }
-            </Container>
-        );
+    constructor() {
+        super();
+        this.state = { person: [] }
     }
 
-    renderName() {
+    componentWillMount() {
+        this.fetchPerson();
+    }
+
+    fetchPerson() {
+        // fetch('/api/person')
+        // .then(data => data.json())
+        // .then((res) => {
+        //     let personDetails = Object.values(res.data)[0];
+        //     this.setState({ person: personDetails });
+        // });
+        this.setState({ person: Person });
+    }
+
+    render() {
+        let person = this.state.person;
+        if(person.length !== 0) {
+            return (
+                <Container className='page-bio'>
+                    { this.renderName(person) }
+                    { this.renderAbout(person) }
+                    { this.renderSkills(person) }
+                    { this.renderQuote(person) }
+                    { this.renderTimeline(person) }
+                </Container>
+            );
+        } else {
+            return null;
+        }
+    }
+
+    renderName(person) {
         return (
             <Container textAlign='center' className='name-section'>
                 <Grid stackable columns={2}>
                     <Grid.Column>
                         <Header as='h1'>
-                            <span className='person-name title'>{ Person.name }</span>
-                            <Header.Subheader><span  className='title'>{ Person.title }</span></Header.Subheader>
+                            <span className='person-name title'>{ person.name }</span>
+                            <Header.Subheader><span  className='title'>{ person.title }</span></Header.Subheader>
                         </Header>
                     </Grid.Column>
                     <Grid.Column>
-                        <Header as='h4'><span className='title'><Icon name='map marker'/>{ Person.location }</span></Header>
+                        <Header as='h4'><span className='title'><Icon name='map marker'/>{ person.location }</span></Header>
                     </Grid.Column>
                 </Grid>
                 <Responsive maxWidth='801' style={{ 'margin-top': '20px' }}>
@@ -40,17 +63,17 @@ class Bio extends Component {
         );
     }
 
-    renderAbout() {
+    renderAbout(person) {
         return (
             <Segment inverted className='opaque'>
-                { Person.description.map((paragraph,p) => 
+                { person.description.map((paragraph,p) => 
                     <p className='about-section' key={p}>{ paragraph }</p>
                 )}
             </Segment>
         )
     }
 
-    renderSkills() {
+    renderSkills(person) {
         return (
             <Grid relaxed stackable columns={2}>
                 <Grid.Column>
@@ -58,7 +81,7 @@ class Bio extends Component {
                         <Header as='h2' inverted>Skills</Header>
                         <Container className='segment-content'>
                             <Grid columns={3}>
-                            { Person.skills.map((skill,s) => 
+                            { person.skills.map((skill,s) => 
                                 <Grid.Column key={s}>
                                     <Header as="h4" inverted>{ skill.category }</Header>
                                     <List bulleted>
@@ -78,23 +101,28 @@ class Bio extends Component {
     }
 
     renderImage() {
-        return (
-            <Image className='profile-image' src='https://avatars0.githubusercontent.com/u/30422493' size='medium' circular centered />
-        )
+        let personImage = this.state.person.image;
+        if(personImage.length !== 0) {
+            return (
+                <Image className='profile-image' src={ personImage } size='medium' circular centered />
+            )
+        } else {
+            return null;
+        }
     }
 
-    renderQuote() {
+    renderQuote(person) {
         return (
             <div className='quote-section' >
-                { Person.quote }
+                { person.quote }
             </div>
         )
     }
 
-    renderTimeline() {
+    renderTimeline(person) {
         return (
             <Segment inverted className='opaque'>
-                <Timeline />
+                <Timeline timeline={ person.history } />
             </Segment>
         )
     }

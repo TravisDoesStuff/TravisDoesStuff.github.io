@@ -1,19 +1,18 @@
 import React, { Component } from 'react';
 import { Header, Accordion, Icon, List, Container } from 'semantic-ui-react';
 
-import Person from '../data/Person';
-
 class Timeline extends Component {
     state = { activeItem: '' };
 
     render() {
+        let timeline = this.props.timeline;
         let activeItem = this.state.activeItem;
 
         return (
             <div>
                 <Header as='h2' inverted>Timeline</Header>
                 <Container className='segment-content'>
-                { Person.history.map((date,d) =>
+                { timeline.map((date,d) =>
                     <Accordion inverted key={d}>
 
                         <Accordion.Title title={ date.title } onClick={ this.handleClick } active={ activeItem === date.title } style={{ 'fontSize': '16px', 'fontWeight': 'bold' }}>

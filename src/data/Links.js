@@ -3,7 +3,7 @@ const Links = {
         {
             name: 'Resume',
             icon: 'file alternate outline',
-            link: ''
+            link: 'resume.pdf'
         },
         {
             name: 'LinkedIn',
@@ -17,5 +17,4 @@ const Links = {
         },
     ]
 }
-
-export default Links;
+ export default Links;

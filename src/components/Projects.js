@@ -5,6 +5,24 @@ import '../css/projects.css';
 import ProjectList from '../data/Projects';
 
 class Projects extends Component {
+    constructor() {
+        super();
+        this.state = { projects: [] };
+    }
+
+    componentWillMount() {
+        this.fetchProjects();
+    }
+
+    fetchProjects = () => {
+        // fetch('/api/projects')
+        // .then(data => data.json())
+        // .then((res) => {
+        //     this.setState({ projects: res.data });
+        // });
+        this.setState({ projects: ProjectList.projects });
+    }
+
     render() {
         return (
             <Container className='page-projects'>
@@ -28,8 +46,8 @@ class Projects extends Component {
         return(
             <Segment inverted className='opaque'>
                 <Card.Group centered className='projects-section'>
-                    { ProjectList.projects.map((project,p) => 
-                        <Card key={p}>
+                    { this.state.projects.map((project) => 
+                        <Card key={project._id}>
                             <a href={ project.link } target='_'>
                                 <div style={{ 'backgroundImage': 'url('+project.image+')' }} className='project-image' />
                             </a>
