@@ -35,3 +35,8 @@
     padding: 10px;
     text-shadow: 2px 2px 10px black;
 }
+
+.profile-image:hover {
+    transition: transform 0.3s linear;
+    transform: rotate(360deg);
+}

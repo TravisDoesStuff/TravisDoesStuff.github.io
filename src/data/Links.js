@@ -3,7 +3,7 @@ const Links = {
         {
             name: 'Resume',
             icon: 'file alternate outline',
-            link: 'resume.pdf'
+            link: 'https://drive.google.com/file/d/1hZ2_gUgnoSa-Isyg2ijQlia1EP92DZ7x/view'
         },
         {
             name: 'LinkedIn',
