@@ -3,8 +3,9 @@ import { HashRouter, Link } from 'react-router-dom';
 import { Menu, Segment, Grid, Dropdown, Responsive } from 'semantic-ui-react';
 
 const menuItems = [
-    { key:'', name:'bio', link:'/' },
-    { key:'', name:'projects', link:'/projects' }
+    { key:'', name:'Bio', link:'/' },
+    { key:'', name:'Projects', link:'/projects' },
+    { key:'', name:'Portfolio', link:'/portfolio' }
 ]
 
 class Header extends Component {
