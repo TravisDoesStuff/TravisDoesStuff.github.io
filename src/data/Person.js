@@ -3,21 +3,21 @@ const Person = {
     title: 'Front-End Developer',
     location: 'Boulder, CO',
     description: [
-        "I'm a curious type, always wondering how my gadgets worked. Eventually I would be modifying computer games to my liking, in time I was wanting to build the software and gadgets itself.",
-        "I have over three years developing web-based applications. Many of the products being made are utilizing modern web frameworks such as React.js and Lumen. On my own time I am learning different technologies such as mobile development in order to utilize on-board sensors and external internet services.",
-        "In my spare time I enjoy playing video games and exploring the world, whether its enjoying the outdoors or getting to know the local spots."
+        "Travis began his interest in software early on in life, always curious to finding out how the program or game he was playing worked. He began by modding his favorite games through sound editing and then on to graphical mods. He would learn later that the skills with this hobby can be applied to a career in software development and followed the path through college then through his first software gig in Columbia, MO.",
+        "Over the next three years, he learned full-stack web development using JavaScript, PHP, and MySQL; including frameworks such as React.js, Redux, and Lumen. On his own, he took some time to learn how mobile applications are made in order to utilize onboard sensors and external internet services.",
+        "Travis also enjoys his time playing video games, exploring the mountains and city, or expressing his creative side through drawing, audio editing, and computer graphics.",
+        "Travis is now in search of his next opportunity in the front-end web development field in order to apply his skill and knowledge to as well as sharing his knowledge to other developers in the web stack. He also is considering a role within UX/UI to apply his knowledge of graphical design, user psychology, and intuition."
     ],
-    quote: "Software development is a creative art given a set of tools, and knowing when to use them.",
+    quote: "Software development to me is a creative art given a set of tools, and knowing when and how to use them.",
     skills: [
         {
             category: 'Languages',
             skills: [
                 'JavaScript',
                 'PHP',
-                'HTML',
-                'CSS',
-                'MySQL',
-                'Java',
+                'HTML5',
+                'CSS3',
+                'MySQL'
             ]
         },
         {
@@ -37,7 +37,7 @@ const Person = {
                 'Git / Github',
                 'Postman',
                 'AWS',
-                'Photoshop'
+                'Photoshop CC'
             ]
         }
     ],

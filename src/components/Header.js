@@ -9,7 +9,7 @@ const menuItems = [
 ]
 
 class Header extends Component {
-    state = { activeItem: 'bio' };
+    state = { activeItem: 'Bio' };
 
     render = () => {
         let activeItem = this.state.activeItem;
@@ -18,7 +18,7 @@ class Header extends Component {
             <Segment inverted>
                 <Grid columns={2}>
                     <Grid.Column className='header-title'>
-                        Does Stuff
+                        TravisB.io
                     </Grid.Column>
                     <Grid.Column>
                         <Responsive minWidth='799'>
