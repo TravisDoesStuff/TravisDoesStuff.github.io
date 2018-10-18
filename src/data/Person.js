@@ -1,7 +1,7 @@
 const Person = {
     name: 'Travis Burt',
     title: 'Front-End Developer',
-    location: 'Boulder, CO',
+    location: 'Lafayette, CO',
     description: [
         "Travis began his interest in software early on in life, always curious to finding out how the program or game he was playing worked. He began by modding his favorite games through sound editing and then on to graphical mods. He would learn later that the skills with this hobby can be applied to a career in software development and followed the path through college then through his first software gig in Columbia, MO.",
         "Over the next three years, he learned full-stack web development using JavaScript, PHP, and MySQL; including frameworks such as React.js, Redux, and Lumen. On his own, he took some time to learn how mobile applications are made in order to utilize onboard sensors and external internet services.",
@@ -42,6 +42,15 @@ const Person = {
         }
     ],
     history: [
+        {
+            startDate: 'Jul 2018',
+            title: 'Relocated to Colorado',
+            icon: 'truck',
+            description: 'Seeking new adventures and opportunities.',
+            tasks: [
+
+            ]
+        },
         {
             startDate: 'Feb 2015',
             endDate: 'Jun 2018',

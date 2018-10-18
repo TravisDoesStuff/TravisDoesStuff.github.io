@@ -18,7 +18,7 @@ class Header extends Component {
             <Segment inverted>
                 <Grid columns={2}>
                     <Grid.Column className='header-title'>
-                        TravisB.io
+                        <a href='/' className='button-home'>TravisB.io</a>
                     </Grid.Column>
                     <Grid.Column>
                         <Responsive minWidth='799'>

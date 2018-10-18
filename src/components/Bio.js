@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import Person from '../data/Person';
-import { Header, List, Grid, Image, Icon, Segment, Container, Responsive } from 'semantic-ui-react';
+import { Header, Grid, Image, Icon, Segment, Container, Responsive } from 'semantic-ui-react';
 import '../css/bio.css';
 
+import Skills from './Skills';
 import Timeline from './Timeline';
 
 class Bio extends Component {
@@ -26,7 +27,7 @@ class Bio extends Component {
     }
 
     render() {
-        let person = this.state.person;
+        const person = this.state.person;
         if(person.length !== 0) {
             return (
                 <Container className='page-bio'>
@@ -42,7 +43,7 @@ class Bio extends Component {
         }
     }
 
-    renderName(person) {
+    renderName = (person) => {
         return (
             <Container textAlign='center' className='name-section'>
                 <Grid stackable columns={2}>
@@ -66,9 +67,11 @@ class Bio extends Component {
     renderAbout(person) {
         return (
             <Segment inverted className='opaque'>
-                { person.description.map((paragraph,p) => 
-                    <p className='about-section' key={p}>{ paragraph }</p>
-                )}
+                <div className='about-section'>
+                    { person.description.map((paragraph,p) => 
+                        <p key={p}>{ paragraph }</p>
+                    )}
+                </div>
             </Segment>
         )
     }
@@ -77,25 +80,11 @@ class Bio extends Component {
         return (
             <Grid relaxed stackable columns={2}>
                 <Grid.Column>
-                    <Segment inverted className='skill-section opaque'>
-                        <Header as='h2' inverted>Skills</Header>
-                        <Container className='segment-content'>
-                            <Grid columns={3}>
-                            { person.skills.map((skill,s) => 
-                                <Grid.Column key={s}>
-                                    <Header as="h4" inverted>{ skill.category }</Header>
-                                    <List bulleted>
-                                        { skill.skills.map((skl,i) =>
-                                            <List.Item key={i}>{ skl }</List.Item>
-                                        )}
-                                    </List>
-                                </Grid.Column>
-                            )}
-                            </Grid>
-                        </Container>
-                    </Segment>
+                    <Skills skills={ person.skills } />
                 </Grid.Column>
-                <Grid.Column><Responsive minWidth='800'>{ this.renderImage() }</Responsive></Grid.Column>
+                <Grid.Column>
+                    <Responsive minWidth='800'>{ this.renderImage() }</Responsive>
+                </Grid.Column>
             </Grid>
         )
     }

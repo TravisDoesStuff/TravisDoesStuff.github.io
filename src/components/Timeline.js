@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Header, Accordion, Icon, List, Container } from 'semantic-ui-react';
+import { Header, Accordion, Icon, List, Container, Transition } from 'semantic-ui-react';
 
 class Timeline extends Component {
     state = { activeItem: '' };
@@ -18,21 +18,23 @@ class Timeline extends Component {
                         <Accordion.Title title={ date.title } onClick={ this.handleClick } active={ activeItem === date.title } style={{ 'fontSize': '16px', 'fontWeight': 'bold' }}>
                             <Icon name='dropdown' />
                             <Icon name={ date.icon } inverted />
-                            { date.startDate } - { date.endDate } -- { date.title }
+                            { date.startDate } { date.endDate ? '- '+date.endDate : '' } -- { date.title }
                         </Accordion.Title>
 
-                        <Accordion.Content active={ activeItem === date.title }>
-                            <Container style={{padding: '0 20px'}}>
-                                { date.description }
-                                <Container style={{padding: '10px 20px'}}>
-                                    <List bulleted>
-                                    { date.tasks.map((task,t) =>
-                                        <List.Item key={t}>{ task }</List.Item>
-                                    )}
-                                    </List>
+                        <Transition.Group animation='slide down' duration='500'>
+                            {activeItem === date.title && 
+                                <Container className="transition visible" style={{padding: '0 20px'}}>
+                                    { date.description }
+                                    <Container style={{padding: '10px 20px'}}>
+                                        <List bulleted>
+                                        { date.tasks.map((task,t) =>
+                                            <List.Item key={t}>{ task }</List.Item>
+                                        )}
+                                        </List>
+                                    </Container>
                                 </Container>
-                            </Container>
-                        </Accordion.Content>
+                            }
+                        </Transition.Group>
 
                     </Accordion>
                 )}
