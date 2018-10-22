@@ -18,10 +18,7 @@
 }
 
 .skill-section {
-    font-size: 1.2em;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+    margin-top: 20px;
 }
 
 .quote-section {

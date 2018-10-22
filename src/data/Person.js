@@ -3,10 +3,10 @@ const Person = {
     title: 'Front-End Developer',
     location: 'Lafayette, CO',
     description: [
-        "Travis began his interest in software early on in life, always curious to finding out how the program or game he was playing worked. He began by modding his favorite games through sound editing and then on to graphical mods. He would learn later that the skills with this hobby can be applied to a career in software development and followed the path through college then through his first software gig in Columbia, MO.",
-        "Over the next three years, he learned full-stack web development using JavaScript, PHP, and MySQL; including frameworks such as React.js, Redux, and Lumen. On his own, he took some time to learn how mobile applications are made in order to utilize onboard sensors and external internet services.",
-        "Travis also enjoys his time playing video games, exploring the mountains and city, or expressing his creative side through drawing, audio editing, and computer graphics.",
-        "Travis is now in search of his next opportunity in the front-end web development field in order to apply his skill and knowledge to as well as sharing his knowledge to other developers in the web stack. He also is considering a role within UX/UI to apply his knowledge of graphical design, user psychology, and intuition."
+        "I was always curious in finding out how the program or game I was playing worked. I started by modding my favorite games through sound editing and then on to graphical mods. I would later learn that the skills with this hobby can be applied to a career in software development.",
+        "During my first gig after college, I learned full-stack web development using JavaScript, PHP, and MySQL; including frameworks such as React.js, Redux, and Lumen. On my own, I took some time to learn how mobile applications are made in order to utilize onboard sensors and external internet services.",
+        "Outside of work, I enjoy my time playing video games, exploring the mountains and city, or expressing my creative side through drawing, audio editing, and computer graphics.",
+        "I am now in search of my next opportunity in the front-end web development field in order to apply my skill and knowledge to as well as sharing my knowledge to other developers in the web stack. I'm also considering a role within UX/UI to apply my knowledge of graphical design, user psychology, and intuition."
     ],
     quote: "Software development to me is a creative art given a set of tools, and knowing when and how to use them.",
     skills: [
@@ -17,7 +17,8 @@ const Person = {
                 'PHP',
                 'HTML5',
                 'CSS3',
-                'MySQL'
+                'MySQL',
+                'Java',
             ]
         },
         {
@@ -26,9 +27,12 @@ const Person = {
                 'React.js',
                 'Redux',
                 'Node.js',
-                'JQuery',
+                'jQuery',
                 'Zend',
                 'Lumen',
+                'Bootstrap',
+                'Semantic UI',
+                'Material UI'
             ]
         },
         {
@@ -36,8 +40,22 @@ const Person = {
             skills: [
                 'Git / Github',
                 'Postman',
-                'AWS',
-                'Photoshop CC'
+                'Amazon Web Services',
+                'Docker',
+                'Photoshop CC',
+                'Illustrator CC',
+                'After Effects CC'
+            ]
+        },
+        {
+            category: 'Everything Else',
+            skills: [
+                'Agile Methodology',
+                'Kanban Methodology',
+                'Responsive Design',
+                'RESTful architecture',
+                'API Development',
+                'User Experience'
             ]
         }
     ],

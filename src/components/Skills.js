@@ -7,12 +7,12 @@ class Skills extends Component {
         const skills = this.props.skills;
 
         return (
-            <Segment inverted className='skill-section opaque'>
+            <Segment inverted className='opaque'>
 
                 <Header as='h2' inverted>Skills</Header>
 
                 <Container className='segment-content'>
-                    <Grid columns={3}>
+                    <Grid stackable columns={4}>
                     { skills.map((skillCategory,s) => 
                         <Grid.Column key={s}>
                             <Header as="h4" inverted>{ skillCategory.category }</Header>

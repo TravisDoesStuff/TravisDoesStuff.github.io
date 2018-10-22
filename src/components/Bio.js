@@ -78,11 +78,11 @@ class Bio extends Component {
 
     renderSkills(person) {
         return (
-            <Grid relaxed stackable columns={2}>
-                <Grid.Column>
+            <Grid relaxed stackable columns={2} className='skill-section' style={{marginTop: '20px'}}>
+                <Grid.Column width={10}>
                     <Skills skills={ person.skills } />
                 </Grid.Column>
-                <Grid.Column>
+                <Grid.Column width={6}>
                     <Responsive minWidth='800'>{ this.renderImage() }</Responsive>
                 </Grid.Column>
             </Grid>
