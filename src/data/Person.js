@@ -17,15 +17,13 @@ const Person = {
                 'PHP',
                 'HTML5',
                 'CSS3',
-                'MySQL',
-                'Java',
+                'MySQL'
             ]
         },
         {
             category: 'Libaries & Frameworks',
             skills: [
                 'React.js',
-                'Redux',
                 'Node.js',
                 'jQuery',
                 'Zend',

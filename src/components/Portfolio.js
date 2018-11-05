@@ -30,9 +30,9 @@ class Portfolio extends Component {
 
     renderTitle() {
         return (
-            <Container textAlign='center' className='projects-header'>
+            <Container textAlign='center' className='portfolio-header'>
                 <Header as='h1'>
-                    <span className='project-title title'>Portfolio</span>
+                    <span className='portfolio-title title'>Portfolio</span>
                 </Header>
             </Container>
         );
@@ -90,7 +90,7 @@ class Portfolio extends Component {
     renderThumbnail(media) {
         return (
             <div className='media-container' key={ media.id }>
-                <Modal trigger={<Image src={ media.link } size={ media.size } />} basic size={ media.size } centered={ false } dimmer='blurring' style={{top: '10%'}} closeIcon>
+                <Modal trigger={<Image src={ media.link } size={ media.size } style={{cursor: 'pointer'}} />} basic size={ media.size } centered={ false } dimmer='blurring' style={{top: '10%'}} closeIcon>
                     <Modal.Content>
                         <Image src={ media.link } style={{margin: 'auto'}} />
                     </Modal.Content>
@@ -102,7 +102,7 @@ class Portfolio extends Component {
     renderVideo(media) {
         return (
             <div className='media-container' key={ media.id }>
-                <Modal trigger={<Image src={ `https://img.youtube.com/vi/${media.id}/mqdefault.jpg` } />} basic centered={ false } dimmer='blurring' style={{top: '10%'}}>
+                <Modal trigger={<Image src={ `https://img.youtube.com/vi/${media.id}/mqdefault.jpg` } style={{cursor: 'pointer'}} />} basic centered={ false } dimmer='blurring' style={{top: '10%'}}>
                     <Modal.Content style={ styleModalVideo }>
                         <iframe width='500' height='300' src={ `https://www.youtube.com/embed/${media.id}` } title={ media.title } frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen style={ styleYoutubeEmbeded } />
                     </Modal.Content>
