@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Person from '../data/Person';
-import { Header, Grid, Image, Icon, Segment, Container, Responsive } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
+import { Header, Grid, Image, Icon, Segment, Container, Responsive, Button } from 'semantic-ui-react';
 import '../css/bio.css';
 
 import Skills from './Skills';
@@ -71,8 +72,27 @@ class Bio extends Component {
                     { person.description.map((paragraph,p) => 
                         <p key={p}>{ paragraph }</p>
                     )}
+                    { this.renderActions() }
                 </div>
             </Segment>
+        )
+    }
+
+    renderActions() {
+        return (
+            <Grid stackable>
+                <Grid.Column width={10}></Grid.Column>
+                <Grid.Column width={6}>
+                    <Button inverted basic color='orange' icon labelPosition='right' as={ Link } to={ '/projects' }>
+                        View my Projects
+                        <Icon name='angle right' />
+                    </Button>
+                    <Button inverted basic color='teal' icon labelPosition='right' as={ Link } to={ '/portfolio' }>
+                        or Portfolio!
+                        <Icon name='chevron right' />
+                    </Button>
+                </Grid.Column>
+            </Grid>
         )
     }
 
