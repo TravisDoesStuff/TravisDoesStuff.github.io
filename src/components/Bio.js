@@ -83,13 +83,9 @@ class Bio extends Component {
             <Grid stackable>
                 <Grid.Column width={10}></Grid.Column>
                 <Grid.Column width={6}>
-                    <Button inverted basic color='orange' icon labelPosition='right' as={ Link } to={ '/projects' }>
+                    <Button inverted basic color='teal' icon labelPosition='right' as={ Link } to={ '/projects' }>
                         View my Projects
                         <Icon name='angle right' />
-                    </Button>
-                    <Button inverted basic color='teal' icon labelPosition='right' as={ Link } to={ '/portfolio' }>
-                        or Portfolio!
-                        <Icon name='chevron right' />
                     </Button>
                 </Grid.Column>
             </Grid>

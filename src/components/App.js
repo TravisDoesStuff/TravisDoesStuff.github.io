@@ -5,7 +5,6 @@ import Header from './Header';
 import Bio from './Bio';
 import Projects from './Projects';
 // import Contact from './Contact';
-import Portfolio from './Portfolio';
 import Footer from './Footer';
 
 import '../css/app.css';
@@ -33,7 +32,6 @@ class App extends Component {
         <Switch>
           <Route exact path="/" component={Bio} />
           <Route exact path="/projects" component={Projects} />
-          <Route path="/portfolio" component={Portfolio} />
         </Switch>
       </HashRouter>
     )

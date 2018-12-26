@@ -4,8 +4,7 @@ import { Menu, Segment, Grid, Dropdown, Responsive } from 'semantic-ui-react';
 
 const menuItems = [
     { key:'', name:'Bio', link:'/' },
-    { key:'', name:'Projects', link:'/projects' },
-    { key:'', name:'Portfolio', link:'/portfolio' }
+    { key:'', name:'Projects', link:'/projects' }
 ]
 
 class Header extends Component {
