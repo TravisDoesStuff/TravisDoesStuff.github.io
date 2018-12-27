@@ -28,15 +28,6 @@ const Projects = {
             githubTitle: 'TravisDoesStuff/TerrainGenerator'
         },
         {
-            title: 'Beer-Recipes',
-            meta: 'Pintrest for Beers',
-            description: 'Single-page application using React to allow users to design beer recipes, including features such as searching for recipes and ingredients.',
-            link: 'https://github.com/TravisDoesStuff/Beer-Recipes',
-            image: 'https://github.com/TravisDoesStuff/Beer-Recipes/raw/master/demo.jpg',
-            githubLink: 'https://github.com/TravisDoesStuff/Beer-Recipes',
-            githubTitle: 'TravisDoesStuff/Beer-Recipes'
-        },
-        {
             title: 'Rotation Clock',
             meta: 'Spinning Polar Clock',
             description: 'Abstract clock displaying system time.',

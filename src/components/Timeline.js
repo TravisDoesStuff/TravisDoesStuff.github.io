@@ -10,14 +10,14 @@ class Timeline extends Component {
 
         return (
             <div>
-                <Header as='h2' inverted>Timeline</Header>
+                <Header as='h2'>Timeline</Header>
                 <Container className='segment-content'>
                 { timeline.map((date,d) =>
-                    <Accordion inverted key={d}>
+                    <Accordion key={d}>
 
                         <Accordion.Title title={ date.title } onClick={ this.handleClick } active={ activeItem === date.title } style={{ 'fontSize': '16px', 'fontWeight': 'bold' }}>
                             <Icon name='dropdown' />
-                            <Icon name={ date.icon } inverted />
+                            <Icon name={ date.icon } />
                             { date.startDate } { date.endDate ? '- '+date.endDate : '' } -- { date.title }
                         </Accordion.Title>
 

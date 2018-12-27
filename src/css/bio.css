@@ -1,41 +1,55 @@
-.page-bio {
-    margin: 30px auto;
+.person-name {
+    font-size: 4em;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    height: 40px;
 }
 
-.person-name {
-    font-size: 1.5em;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+.person-title {
+    font-size: 1.2em;
+    height: 25px;
 }
 
 .name-section {
+    background: url('/background.png') no-repeat center center fixed;
+    background-size: cover;
+    padding: 30px;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-    margin-bottom: 20px;
+}
+
+.name-block {
+    padding-top: 80px;
+    text-align: right;
 }
 
 .about-section {
+    background: whitesmoke;
+    padding: 30px 0;
+}
+
+.about-me {
     font-size: 1.2em;
-    padding: 10px 20px;
 }
 
-.skill-section {
-    margin-top: 20px;
+.about-block {
+    padding: 0 10%;
 }
 
-.quote-section {
-    color: sandybrown;
-    font-size: 2em;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: italic;
-    max-width: 800px;
-    text-align: center;
-    line-height: 1em;
-    margin: auto;
-    margin-top: 20px;
-    padding: 10px;
-    text-shadow: 2px 2px 10px black;
+.profile-image {
+    height: 250px;
+    width: 250px;
 }
 
 .profile-image:hover {
     transform: rotate(360deg);
     transition: 0.5s
+}
+
+.timeline-section {
+    background: whitesmoke;
+    padding: 30px 0;
+}
+
+.actionContainer {
+    margin-top: 30px;
+    text-align: right;
 }

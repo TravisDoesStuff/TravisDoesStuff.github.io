@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Header, Grid, List, Segment, Container } from 'semantic-ui-react';
+import { Header, Grid, List, Container } from 'semantic-ui-react';
 
 class Skills extends Component {
 
@@ -7,15 +7,14 @@ class Skills extends Component {
         const skills = this.props.skills;
 
         return (
-            <Segment inverted className='opaque'>
-
-                <Header as='h2' inverted>Skills</Header>
+            <div className='skill-section'>
+                <Header as='h2'>Skills</Header>
 
                 <Container className='segment-content'>
                     <Grid stackable columns={4}>
                     { skills.map((skillCategory,s) => 
                         <Grid.Column key={s}>
-                            <Header as="h4" inverted>{ skillCategory.category }</Header>
+                            <Header as="h4">{ skillCategory.category }</Header>
                             <List bulleted>
                             { skillCategory.skills.map((skill,i) =>
                                 <List.Item key={i}>{ skill }</List.Item>
@@ -25,7 +24,7 @@ class Skills extends Component {
                     )}
                     </Grid>
                 </Container>
-            </Segment>
+            </div>
         )
     }
 }

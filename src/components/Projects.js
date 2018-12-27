@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Header, Card, Icon, Segment, Grid, Image, Modal } from 'semantic-ui-react';
+import { Header, Card, Icon, Image, Modal, Menu, Divider } from 'semantic-ui-react';
 import '../css/projects.css';
 
 import ProjectList from '../data/Projects';
@@ -40,28 +40,44 @@ class Projects extends Component {
 
     render() {
         return (
-            <Container className='page-projects'>
+            <div>
                 { this.renderTitle() }
-                { this.renderProjects() }
-                { this.renderGallery() }
-            </Container>
+                <div className='projects-section'>
+                    { this.renderProjects() }
+                    <Divider />
+                    { this.renderGraphics() }
+                    <Divider />
+                    { this.renderAudioVideo() }
+                </div>
+            </div>
         );
     }
 
     renderTitle() {
         return (
-            <Container textAlign='center' className='projects-header'>
-                <Header as='h1'>
-                    <span className='project-title title'>Projects</span>
-                </Header>
-            </Container>
+            <div textAlign='center' className='projects-header'>
+                <div className='project-title title'>Projects</div>
+            </div>
         );
+    }
+
+    renderNav() {
+        return (
+            <div className='nav-section'>
+                <Menu fluid widths={3}>
+                    <Menu.Item>Development</Menu.Item>
+                    <Menu.Item>Graphics</Menu.Item>
+                    <Menu.Item>Audio/Video</Menu.Item>
+                </Menu>
+            </div>
+        )
     }
 
     renderProjects() {
         return(
-            <Segment inverted className='opaque'>
-                <Card.Group centered className='projects-section'>
+            <div className='projects-block'>
+                <Header as='h2'>Development:</Header>
+                <Card.Group centered>
                     { this.state.projects.map((project) => 
                         <Card key={project._id}>
                             <a href={ project.link } target='_'>
@@ -80,27 +96,29 @@ class Projects extends Component {
                         </Card>
                     )}
                 </Card.Group>
-            </Segment>
+            </div>
         )
     }
 
-    renderGallery() {
+    renderGraphics() {
         return (
-            <Grid.Column width={13}>
-                <Segment inverted className='opaque' id="graphics">
-                    <Header as="h3">3D Graphics</Header>
-                    { Gallery.threedGraphics.map((media) => {
-                        return this.renderThreeMedia(media);
-                    })}
-                </Segment>
+            <div className='projects-block'>
+                <Header as="h2">Graphics</Header>
+                { Gallery.threedGraphics.map((media) => {
+                    return this.renderThreeMedia(media);
+                })}
+            </div>
+        )
+    }
 
-                <Segment inverted className='opaque' id="audioVideo">
-                    <Header as="h3">Audio Video</Header>
-                    { Gallery.audioVideo.map((audioVideo) => 
-                        this.renderVideo(audioVideo)
-                    )}
-                </Segment>
-            </Grid.Column>
+    renderAudioVideo() {
+        return (
+            <div className='projects-block'>
+                <Header as="h2">Audio Video</Header>
+                { Gallery.audioVideo.map((audioVideo) => 
+                    this.renderVideo(audioVideo)
+                )}
+            </div>
         )
     }
 

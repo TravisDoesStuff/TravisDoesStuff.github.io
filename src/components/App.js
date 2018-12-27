@@ -4,7 +4,6 @@ import { Route, HashRouter, Switch } from 'react-router-dom';
 import Header from './Header';
 import Bio from './Bio';
 import Projects from './Projects';
-// import Contact from './Contact';
 import Footer from './Footer';
 
 import '../css/app.css';

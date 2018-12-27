@@ -4,11 +4,6 @@ html, body {
     background-color: #1B1C1D;
 }
 
-.App {
-    background: url('/background.png') no-repeat center center fixed;
-    background-size: cover;
-}
-
 .App-header {
     background-color: #222222;
     color: white;
@@ -19,7 +14,7 @@ html, body {
 }
 
 .header-title {
-    font-size: 2em;
+    font-size: 1.2em;
     text-align: center;
     margin: auto;
 }

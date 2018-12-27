@@ -6,9 +6,7 @@ const Person = {
         "I was always curious in finding out how the program or game I was playing worked. I started by modding my favorite games through sound editing and then on to graphical mods. I would later learn that the skills with this hobby can be applied to a career in software development.",
         "During my first gig after college, I learned full-stack web development using JavaScript, PHP, and MySQL; including frameworks such as React.js, Redux, and Lumen. On my own, I took some time to learn how mobile applications are made in order to utilize onboard sensors and external internet services.",
         "Outside of work, I enjoy my time playing video games, exploring the mountains and city, or expressing my creative side through drawing, audio editing, and computer graphics.",
-        "I am now in search of my next opportunity in the front-end web development field in order to apply my skill and knowledge to as well as sharing my knowledge to other developers in the web stack. I'm also considering a role within UX/UI to apply my knowledge of graphical design, user psychology, and intuition."
     ],
-    quote: "Software development to me is a creative art given a set of tools, and knowing when and how to use them.",
     skills: [
         {
             category: 'Languages',

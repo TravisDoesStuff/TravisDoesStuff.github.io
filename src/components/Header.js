@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { HashRouter, Link } from 'react-router-dom';
-import { Menu, Segment, Grid, Dropdown, Responsive } from 'semantic-ui-react';
+import { Menu, Grid, Dropdown, Responsive } from 'semantic-ui-react';
 
 const menuItems = [
     { key:'', name:'Bio', link:'/' },
@@ -14,7 +14,7 @@ class Header extends Component {
         let activeItem = this.state.activeItem;
 
         return (
-            <Segment inverted>
+            <div className='App-header'>
                 <Grid columns={2}>
                     <Grid.Column className='header-title'>
                         <a href='/' className='button-home'>TravisB.io</a>
@@ -50,7 +50,7 @@ class Header extends Component {
                         </Responsive>
                     </Grid.Column>
                 </Grid>
-            </Segment>
+            </div>
         )
     }
 
