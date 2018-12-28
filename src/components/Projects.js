@@ -103,7 +103,7 @@ class Projects extends Component {
     renderGraphics() {
         return (
             <div className='projects-block'>
-                <Header as="h2">Graphics</Header>
+                <Header as="h2">Graphics:</Header>
                 { Gallery.threedGraphics.map((media) => {
                     return this.renderThreeMedia(media);
                 })}
@@ -114,7 +114,7 @@ class Projects extends Component {
     renderAudioVideo() {
         return (
             <div className='projects-block'>
-                <Header as="h2">Audio Video</Header>
+                <Header as="h2">Audio/Video:</Header>
                 { Gallery.audioVideo.map((audioVideo) => 
                     this.renderVideo(audioVideo)
                 )}

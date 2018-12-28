@@ -11,18 +11,18 @@ const Portfolio = {
             type: 'youtube',
         },
         {
-            id: 'bucket.png',
-            title: 'Bucket List Trophy',
-            type: 'image',
-            link: '/portfolio/3d/bucket.png',
-            size: 'small',
-        },
-        {
             id: 'stillLife.jpeg',
             title: 'Still-life Project',
             type: 'image',
             link: '/portfolio/3d/stillLife.jpeg',
             size: 'large'
+        },
+        {
+            id: 'bucket.png',
+            title: 'Bucket List Trophy',
+            type: 'image',
+            link: '/portfolio/3d/bucket.png',
+            size: 'small',
         },
     ],
     audioVideo: [

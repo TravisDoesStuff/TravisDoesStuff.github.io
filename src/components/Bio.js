@@ -64,7 +64,7 @@ class Bio extends Component {
         return (
             <div className='about-section'>
                 <div className='about-block about-me'>
-                    <Header as='h2'>About me:</Header>
+                    <Header as='h2'>About me</Header>
                     { person.description.map((paragraph,p) => 
                         <p key={p}>{ paragraph }</p>
                     )}
@@ -85,7 +85,7 @@ class Bio extends Component {
     renderActions() {
         return (
             <div className='actionContainer'>
-                <Button basic color='teal' icon labelPosition='right' as={ Link } to={ '/projects' } size='large'>
+                <Button basic color='teal' icon labelPosition='right' as={ Link } to={ '/projects' } size='large' style={{ fontWeight: 'bold' }}>
                     View my Projects
                     <Icon name='angle right' />
                 </Button>

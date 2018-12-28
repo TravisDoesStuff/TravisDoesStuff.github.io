@@ -11,18 +11,16 @@ class Skills extends Component {
                 <Header as='h2'>Skills</Header>
 
                 <Container className='segment-content'>
-                    <Grid stackable columns={4}>
                     { skills.map((skillCategory,s) => 
-                        <Grid.Column key={s}>
+                        <div className='skill-column' key={s}>
                             <Header as="h4">{ skillCategory.category }</Header>
                             <List bulleted>
                             { skillCategory.skills.map((skill,i) =>
                                 <List.Item key={i}>{ skill }</List.Item>
                             )}
                             </List>
-                        </Grid.Column>
+                        </div>
                     )}
-                    </Grid>
                 </Container>
             </div>
         )
