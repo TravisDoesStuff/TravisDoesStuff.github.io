@@ -9,7 +9,7 @@ class Timeline extends Component {
         let activeItem = this.state.activeItem;
 
         return (
-            <div>
+            <div className='timeline'>
                 <Header as='h2'>Timeline</Header>
                 <Container className='segment-content'>
                 { timeline.map((date,d) =>

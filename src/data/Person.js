@@ -1,6 +1,6 @@
 const Person = {
     name: 'Travis Burt',
-    title: 'Front-End Developer',
+    title: 'Developer & Designer',
     location: 'Lafayette, CO',
     description: [
         "I was always curious in finding out how the program or game I was playing worked. I started by modding my favorite games through sound editing and then on to graphical mods. I would later learn that the skills with this hobby can be applied to a career in software development.",

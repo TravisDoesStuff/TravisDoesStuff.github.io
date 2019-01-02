@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Person from '../data/Person';
+import Links from '../data/Links';
 import { Link } from 'react-router-dom';
 import { Header, Grid, Image, Icon, Button, Divider } from 'semantic-ui-react';
 import '../css/bio.css';
@@ -10,11 +11,12 @@ import Timeline from './Timeline';
 class Bio extends Component {
     constructor() {
         super();
-        this.state = { person: [] }
+        this.state = { person: [], links: [] }
     }
 
     componentWillMount() {
         this.fetchPerson();
+        this.fetchLinks();
     }
 
     fetchPerson() {
@@ -27,12 +29,18 @@ class Bio extends Component {
         this.setState({ person: Person });
     }
 
+    fetchLinks() {
+        this.setState({ links: Links });
+    }
+
     render() {
         const person = this.state.person;
-        if(person.length !== 0) {
+        const links = this.state.links.links;
+        if(person.length !== 0 && links.length !== 0) {
             return (
                 <div className='page-bio'>
                     { this.renderName(person) }
+                    { this.renderActions(links) }
                     { this.renderAbout(person) }
                 </div>
             );
@@ -49,7 +57,7 @@ class Bio extends Component {
                         <div className='name-block'>
                             <div className='person-name title'>{ person.name }</div>
                             <div className='person-title title'>{ person.title }</div>
-                            <div className='person-title title'><Icon name='map marker'/> { person.location }</div>
+                            <div className='person-location title'><Icon name='map marker'/> { person.location }</div>
                         </div>
                     </Grid.Column>
                     <Grid.Column>
@@ -63,32 +71,49 @@ class Bio extends Component {
     renderAbout(person) {
         return (
             <div className='about-section'>
+                <Divider />
                 <div className='about-block about-me'>
                     <Header as='h2'>About me</Header>
-                    { person.description.map((paragraph,p) => 
-                        <p key={p}>{ paragraph }</p>
-                    )}
-                    { this.renderActions() }
+                    <div className='aboutParagraph'>
+                        { person.description.map((paragraph,p) => 
+                            <p key={p}>{ paragraph }</p>
+                        )}
+                    </div>
                 </div>
                 <Divider />
                 <div className='about-block'>
                     <Skills skills={ person.skills } />
                 </div>
                 <Divider />
-                <div className='about-block'>
+                <div className='about-block about-timeline'>
                     <Timeline timeline={ person.history } />
                 </div>
             </div>
         )
     }
 
-    renderActions() {
+    renderActions(links) {
         return (
-            <div className='actionContainer'>
-                <Button basic color='teal' icon labelPosition='right' as={ Link } to={ '/projects' } size='large' style={{ fontWeight: 'bold' }}>
-                    View my Projects
-                    <Icon name='angle right' />
-                </Button>
+            <div className='about-section action-section about-block'>
+                <Grid stackable columns={2}>
+                    <Grid.Row>
+                        <Grid.Column>
+                            <Button.Group widths={ links.length }>
+                            { links.map((link) =>
+                                <Button basic color='black' key={ link._id } href={ link.link } target='_blank' size='large' style={{ fontWeight: 'bold' }}>
+                                    <Icon link name={ link.icon } /> { link.name }
+                                </Button>
+                            )}
+                            </Button.Group>
+                        </Grid.Column>
+                        <Grid.Column>
+                            <Button color='blue' icon labelPosition='right' as={ Link } to={ '/projects' } size='large' fluid style={{ fontWeight: 'bold' }}>
+                                View my Projects
+                                <Icon name='angle right' />
+                            </Button>
+                        </Grid.Column>
+                    </Grid.Row>
+                </Grid>
             </div>
         )
     }
