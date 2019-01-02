@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Person from '../data/Person';
 import Links from '../data/Links';
 import { Link } from 'react-router-dom';
-import { Header, Grid, Image, Icon, Button, Divider } from 'semantic-ui-react';
+import { Header, Grid, Image, Icon, Button, Divider, Responsive } from 'semantic-ui-react';
 import '../css/bio.css';
 
 import Skills from './Skills';
@@ -95,25 +95,43 @@ class Bio extends Component {
     renderActions(links) {
         return (
             <div className='about-section action-section about-block'>
-                <Grid stackable columns={2}>
-                    <Grid.Row>
-                        <Grid.Column>
-                            <Button.Group widths={ links.length }>
-                            { links.map((link) =>
-                                <Button basic color='black' key={ link._id } href={ link.link } target='_blank' size='large' style={{ fontWeight: 'bold' }}>
-                                    <Icon link name={ link.icon } /> { link.name }
+                <Responsive maxWidth={Responsive.onlyComputer.minWidth} >
+                    <Grid columns={2}>
+                        <Grid.Row>
+                            <Grid.Column>
+                                { links.map((link) =>
+                                    <Button circular icon key={ link._id } href={ link.link } target='_blank' size='large' color={ link.color }>
+                                        <Icon link name={ link.icon } />
+                                    </Button>
+                                )}
+                            </Grid.Column>
+                            <Grid.Column>
+                                <Button color='blue' icon labelPosition='right' as={ Link } to={ '/projects' } size='large' fluid style={{ fontWeight: 'bold' }}>
+                                    Projects
+                                    <Icon name='angle right' />
                                 </Button>
-                            )}
-                            </Button.Group>
-                        </Grid.Column>
-                        <Grid.Column>
-                            <Button color='blue' icon labelPosition='right' as={ Link } to={ '/projects' } size='large' fluid style={{ fontWeight: 'bold' }}>
-                                View my Projects
-                                <Icon name='angle right' />
-                            </Button>
-                        </Grid.Column>
-                    </Grid.Row>
-                </Grid>
+                            </Grid.Column>
+                        </Grid.Row>
+                    </Grid>
+                </Responsive>
+                <Responsive minWidth={Responsive.onlyComputer.minWidth} >
+                    <Grid columns={2}>
+                        <Grid.Row>
+                            <Grid.Column>
+                                { links.map((link) =>
+                                    <Button circular icon key={ link._id } href={ link.link } target='_blank' size='large' style={{ fontWeight: 'bold' }} color={ link.color }>
+                                        <Icon link name={ link.icon } /> { link.name }
+                                    </Button>
+                                )}
+                            </Grid.Column>
+                            <Grid.Column>
+                                <Button color='blue' icon labelPosition='right' as={ Link } to={ '/projects' } size='large' fluid style={{ fontWeight: 'bold' }}>
+                                    View my Projects <Icon name='angle right' />
+                                </Button>
+                            </Grid.Column>
+                        </Grid.Row>
+                    </Grid>
+                </Responsive>
             </div>
         )
     }
