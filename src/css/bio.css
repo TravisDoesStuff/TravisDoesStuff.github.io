@@ -33,7 +33,7 @@
 
 .about-me {
     font-size: 1.2em;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
 }
 
 .about-block {
@@ -74,4 +74,12 @@
 
 .timeline {
     margin-bottom: 30px;
+}
+
+.action-section {
+    margin-top: 15px;
+}
+
+.action-row {
+    padding: 15px 0;
 }

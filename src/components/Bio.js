@@ -95,7 +95,7 @@ class Bio extends Component {
     renderActions(links) {
         return (
             <div className='about-section action-section about-block'>
-                <Responsive maxWidth={Responsive.onlyComputer.minWidth} >
+                <Responsive maxWidth={Responsive.onlyComputer.minWidth} className='action-row' >
                     <Grid columns={2}>
                         <Grid.Row>
                             <Grid.Column>
@@ -114,7 +114,7 @@ class Bio extends Component {
                         </Grid.Row>
                     </Grid>
                 </Responsive>
-                <Responsive minWidth={Responsive.onlyComputer.minWidth} >
+                <Responsive minWidth={Responsive.onlyComputer.minWidth} className='action-row' >
                     <Grid columns={2}>
                         <Grid.Row>
                             <Grid.Column>
