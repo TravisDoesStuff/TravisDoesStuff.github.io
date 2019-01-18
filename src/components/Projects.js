@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Header, Card, Icon, Image, Modal, Menu, Divider } from 'semantic-ui-react';
+import { Header, Card, Icon, Image, Modal, Menu, Divider, Container } from 'semantic-ui-react';
 import '../css/projects.css';
 
 import ProjectList from '../data/Projects';
@@ -55,7 +55,7 @@ class Projects extends Component {
 
     renderTitle() {
         return (
-            <div textAlign='center' className='projects-header'>
+            <div className='projects-header'>
                 <div className='project-title title'>Projects</div>
             </div>
         );
@@ -75,13 +75,17 @@ class Projects extends Component {
 
     renderProjects() {
         return(
-            <div className='projects-block'>
+            <Container className='projects-block'>
                 <Header as='h2'>Development:</Header>
                 <Card.Group centered>
                     { this.state.projects.map((project) => 
                         <Card key={project._id}>
                             <a href={ project.link } target='_'>
-                                <div style={{ 'backgroundImage': 'url('+project.image+')' }} className='project-image' />
+                                <div style={{ 'backgroundImage': 'url('+project.image+')' }} className='project-image'>
+                                    <div className='project-image_overlay'>
+                                        <div className='mediaIcon'><Icon name='external' size='huge' /></div>
+                                    </div>
+                                </div>
                             </a>
                             <Card.Content>
                                 <Card.Header>{ project.title }</Card.Header>
@@ -89,36 +93,36 @@ class Projects extends Component {
                                 <Card.Description>{ project.description }</Card.Description>
                             </Card.Content>
                             <Card.Content extra>
-                                <a href={ project.githubLink } target='_' >
+                                <a href={ project.githubLink } target='_' className='project-github-link'>
                                     <Icon name='github' />{ project.githubTitle }
                                 </a>
                             </Card.Content>
                         </Card>
                     )}
                 </Card.Group>
-            </div>
+            </Container>
         )
     }
 
     renderGraphics() {
         return (
-            <div className='projects-block'>
+            <Container className='projects-block'>
                 <Header as="h2">Graphics:</Header>
                 { Gallery.threedGraphics.map((media) => {
                     return this.renderThreeMedia(media);
                 })}
-            </div>
+            </Container>
         )
     }
 
     renderAudioVideo() {
         return (
-            <div className='projects-block'>
+            <Container className='projects-block'>
                 <Header as="h2">Audio/Video:</Header>
                 { Gallery.audioVideo.map((audioVideo) => 
                     this.renderVideo(audioVideo)
                 )}
-            </div>
+            </Container>
         )
     }
 
@@ -130,9 +134,11 @@ class Projects extends Component {
     }
 
     renderThumbnail(media) {
+        let thumbnail = <Image src={ media.link } size={ media.size } style={{cursor: 'pointer'}} />
+
         return (
             <div className='media-container' key={ media.id }>
-                <Modal trigger={<Image src={ media.link } size={ media.size } style={{cursor: 'pointer'}} />} basic size={ media.size } centered={ false } dimmer='blurring' style={{top: '10%'}} closeIcon>
+                <Modal trigger={thumbnail} basic size={ media.size } centered={ false } dimmer='blurring' style={{top: '10%'}} closeIcon>
                     <Modal.Content>
                         <Image src={ media.link } style={{margin: 'auto'}} />
                     </Modal.Content>
@@ -142,9 +148,15 @@ class Projects extends Component {
     }
 
     renderVideo(media) {
+        let thumbnail = <div style={{ 'backgroundImage': `url(https://img.youtube.com/vi/${media.id}/mqdefault.jpg)` }} className='project-video'>
+            <div className='project-image_overlay'>
+                <div className='mediaIcon'><Icon name='youtube play' size='huge' /></div>
+            </div>
+        </div>
+        
         return (
             <div className='media-container' key={ media.id }>
-                <Modal trigger={<Image src={ `https://img.youtube.com/vi/${media.id}/mqdefault.jpg` } style={{cursor: 'pointer'}} />} basic centered={ false } dimmer='blurring' style={{top: '10%'}}>
+                <Modal trigger={thumbnail} basic centered={ false } dimmer='blurring' style={{top: '10%'}}>
                     <Modal.Content style={ styleModalVideo }>
                         <iframe width='500' height='300' src={ `https://www.youtube.com/embed/${media.id}` } title={ media.title } frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen style={ styleYoutubeEmbeded } />
                     </Modal.Content>

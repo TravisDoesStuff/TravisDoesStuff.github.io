@@ -1,13 +1,22 @@
 const Projects = {
     projects: [
         {
-            title: 'Rorschach',
-            meta: 'MERN-stack Inkblot Test',
-            description: 'MERN-stack application where users were presented official inkblots and they inputted what they saw. They can then compare their results with other users.',
-            link: 'https://github.com/TravisDoesStuff/Rorschach',
-            image: 'https://github.com/TravisDoesStuff/Rorschach/raw/master/rorschach_readme.jpg',
-            githubLink: 'https://github.com/TravisDoesStuff/Rorschach',
-            githubTitle: 'TravisDoesStuff/Rorschach'
+            title: 'Map Creator',
+            meta: 'Procedural Generation',
+            description: 'Utilizes the Square-Diamond Algorithm with a touch of my own mathematics to generate terrain.',
+            link: 'https://travisdoesstuff.github.io/TerrainGenerator/',
+            image: 'https://github.com/TravisDoesStuff/TerrainGenerator/raw/master/coolTerrain.jpg',
+            githubLink: 'https://github.com/TravisDoesStuff/TerrainGenerator',
+            githubTitle: 'TravisDoesStuff/TerrainGenerator'
+        },
+        {
+            title: 'Terrain Generator',
+            meta: 'Procedural Generation',
+            description: 'Utilizes the Midpoint Displacement algorithm to create randomly generated terrain often seen in video games.',
+            link: 'https://travisdoesstuff.github.io/procGen/',
+            image: 'https://github.com/TravisDoesStuff/procGen/raw/master/preview.png',
+            githubLink: 'https://github.com/TravisDoesStuff/procGen',
+            githubTitle: 'TravisDoesStuff/procGen'
         },
         {
             title: 'Weather Station Model',
@@ -19,15 +28,6 @@ const Projects = {
             githubTitle: 'TravisDoesStuff/WeatherStation'
         },
         {
-            title: 'Map Creator',
-            meta: 'Procedural Generation',
-            description: 'Utilizes the Square-Diamond Algorithm with a touch of my own mathematics to generate terrain.',
-            link: 'https://travisdoesstuff.github.io/TerrainGenerator/',
-            image: 'https://github.com/TravisDoesStuff/TerrainGenerator/raw/master/coolTerrain.jpg',
-            githubLink: 'https://github.com/TravisDoesStuff/TerrainGenerator',
-            githubTitle: 'TravisDoesStuff/TerrainGenerator'
-        },
-        {
             title: 'Rotation Clock',
             meta: 'Spinning Polar Clock',
             description: 'Abstract clock displaying system time.',
@@ -37,14 +37,14 @@ const Projects = {
             githubTitle: 'TravisDoesStuff/RotationClock'
         },
         {
-            title: 'Terrain Generator',
-            meta: 'Procedural Generation',
-            description: 'Utilizes the Midpoint Displacement algorithm to create randomly generated terrain often seen in video games.',
-            link: 'https://travisdoesstuff.github.io/procGen/',
-            image: 'https://github.com/TravisDoesStuff/procGen/raw/master/preview.png',
-            githubLink: 'https://github.com/TravisDoesStuff/procGen',
-            githubTitle: 'TravisDoesStuff/procGen'
-        }
+            title: 'Rorschach',
+            meta: 'MERN-stack Inkblot Test',
+            description: 'MERN-stack application where users were presented official inkblots and they inputted what they saw. They can then compare their results with other users.',
+            link: 'https://github.com/TravisDoesStuff/Rorschach',
+            image: 'https://github.com/TravisDoesStuff/Rorschach/raw/master/rorschach_readme.jpg',
+            githubLink: 'https://github.com/TravisDoesStuff/Rorschach',
+            githubTitle: 'TravisDoesStuff/Rorschach'
+        },
     ]
 };
  export default Projects;
