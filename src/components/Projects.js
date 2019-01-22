@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Header, Card, Icon, Image, Modal, Menu, Divider, Container } from 'semantic-ui-react';
+import { Header, Card, Icon, Image, Modal, Menu, Divider, Container, Button } from 'semantic-ui-react';
 import '../css/projects.css';
 
 import ProjectList from '../data/Projects';
@@ -111,6 +111,12 @@ class Projects extends Component {
                 { Gallery.threedGraphics.map((media) => {
                     return this.renderThreeMedia(media);
                 })}
+                <Container className='graphics-nav'>
+                    <Button icon color='blue' labelPosition='right' href={ 'https://github.com/TravisDoesStuff/design' } target='_blank' size='large'>
+                        More
+                        <Icon name='arrow right' />
+                    </Button>
+                </Container>
             </Container>
         )
     }
