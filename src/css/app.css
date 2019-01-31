@@ -26,12 +26,19 @@ html, body {
 }
 
 .App-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 20px;
 }
 .App-footer a {
+    font-size: 16px;
     color: white;
+    text-decoration: underline;
+}
+
+.footer-links {
+    margin-top: 10px;
 }
 
 .footer-linkBlock {
@@ -59,6 +66,10 @@ html, body {
 .button-home:hover {
     color: white;
     opacity: 1;
+}
+
+.copyright {
+    margin-top: 10px;
 }
 
 /* Semantic UI, vertical divider bug workaround */

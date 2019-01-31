@@ -49,6 +49,7 @@ class Projects extends Component {
                     <Divider />
                     { this.renderAudioVideo() }
                 </div>
+                { this.renderFloor() }
             </div>
         );
     }
@@ -129,6 +130,12 @@ class Projects extends Component {
                     this.renderVideo(audioVideo)
                 )}
             </Container>
+        )
+    }
+
+    renderFloor() {
+        return (
+            <div className="floor-section"></div>
         )
     }
 

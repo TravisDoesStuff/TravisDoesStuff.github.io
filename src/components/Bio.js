@@ -42,6 +42,7 @@ class Bio extends Component {
                     { this.renderName(person) }
                     { this.renderActions(links) }
                     { this.renderAbout(person) }
+                    { this.renderFloor() }
                 </div>
             );
         } else {
@@ -92,6 +93,12 @@ class Bio extends Component {
         )
     }
 
+    renderFloor() {
+        return (
+            <div className="floor-section"></div>
+        )
+    }
+
     renderActions(links) {
         return (
             <div className='about-section action-section'>
@@ -107,7 +114,7 @@ class Bio extends Component {
                                     )}
                                 </Grid.Column>
                                 <Grid.Column>
-                                    <Button color='blue' icon labelPosition='right' as={ Link } to={ '/projects' } size='large' fluid style={{ fontWeight: 'bold' }}>
+                                    <Button basic color='blue' icon labelPosition='right' as={ Link } to={ '/projects' } size='large' fluid style={{ fontWeight: 'bold' }}>
                                         Projects
                                         <Icon name='angle right' />
                                     </Button>
@@ -126,7 +133,7 @@ class Bio extends Component {
                                     )}
                                 </Grid.Column>
                                 <Grid.Column>
-                                    <Button color='blue' icon labelPosition='right' as={ Link } to={ '/projects' } size='large' fluid style={{ fontWeight: 'bold' }}>
+                                    <Button basic color='blue' icon labelPosition='right' as={ Link } to={ '/projects' } size='large' fluid style={{ fontWeight: 'bold' }}>
                                         View my Projects <Icon name='angle right' />
                                     </Button>
                                 </Grid.Column>
