@@ -1,6 +1,7 @@
 const Projects = {
     projects: [
         {
+            _id: 1,
             title: 'Map Creator',
             meta: 'Procedural Generation',
             description: 'Utilizes the Square-Diamond Algorithm with a touch of my own mathematics to generate terrain.',
@@ -10,6 +11,7 @@ const Projects = {
             githubTitle: 'TravisDoesStuff/TerrainGenerator'
         },
         {
+            _id: 2,
             title: 'Terrain Generator',
             meta: 'Procedural Generation',
             description: 'Utilizes the Midpoint Displacement algorithm to create randomly generated terrain often seen in video games.',
@@ -19,6 +21,7 @@ const Projects = {
             githubTitle: 'TravisDoesStuff/procGen'
         },
         {
+            _id: 3,
             title: 'Weather Station Model',
             meta: 'Professional Weather Diagrams',
             description: 'Android application giving current weather data to user based on meteorological station diagrams.',
@@ -28,6 +31,7 @@ const Projects = {
             githubTitle: 'TravisDoesStuff/WeatherStation'
         },
         {
+            _id: 4,
             title: 'Rotation Clock',
             meta: 'Spinning Polar Clock',
             description: 'Abstract clock displaying system time.',
@@ -37,6 +41,7 @@ const Projects = {
             githubTitle: 'TravisDoesStuff/RotationClock'
         },
         {
+            _id: 5,
             title: 'Rorschach',
             meta: 'MERN-stack Inkblot Test',
             description: 'MERN-stack application where users were presented official inkblots and they inputted what they saw. They can then compare their results with other users.',

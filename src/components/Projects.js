@@ -158,7 +158,7 @@ class Projects extends Component {
         </div>
 
         return (
-            <Card>
+            <Card key={media.id}>
                 <Modal trigger={thumbnail} basic size={ media.size } centered={ false } dimmer='blurring' style={{top: '10%'}} closeIcon>
                     <Modal.Content>
                         <Image src={ media.link } style={{margin: 'auto'}} />
@@ -179,7 +179,7 @@ class Projects extends Component {
         </div>
 
         return (
-            <Card>
+            <Card key={media.id}>
                 <Modal trigger={thumbnail} basic centered={ false } dimmer='blurring' style={{top: '10%'}}>
                     <Modal.Content style={ styleModalVideo }>
                         <iframe width='500' height='300' src={ `https://www.youtube.com/embed/${media.id}` } title={ media.title } frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen style={ styleYoutubeEmbeded } />
