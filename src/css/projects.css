@@ -25,6 +25,7 @@
     height: 200px;
     background: transparent no-repeat center;
     background-size: cover;
+    cursor: pointer;
 }
 
 .project-image_overlay {
@@ -69,8 +70,9 @@
 }
 
 .project-video {
-    width: 320px;
+    width: 290px;
     height: 180px;
+    cursor: pointer;
 }
 
 .graphics-nav {

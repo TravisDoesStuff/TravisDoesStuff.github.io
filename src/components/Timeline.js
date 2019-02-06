@@ -18,20 +18,18 @@ class Timeline extends Component {
                         <Accordion.Title title={ date.title } onClick={ this.handleClick } active={ activeItem === date.title } style={{ 'fontSize': '16px', 'fontWeight': 'bold' }}>
                             <Icon name='dropdown' />
                             <Icon name={ date.icon } />
-                            { date.startDate } { date.endDate ? '- '+date.endDate : '' } -- { date.title }
+                            <span className='dateNav'>{ date.startDate } { date.endDate ? '- '+date.endDate : '' } -- { date.title }</span>
                         </Accordion.Title>
 
                         <Transition.Group animation='slide down' duration='500'>
                             {activeItem === date.title && 
                                 <Container className="transition visible" style={{padding: '0 20px'}}>
                                     { date.description }
-                                    <Container style={{padding: '10px 20px'}}>
-                                        <List bulleted>
-                                        { date.tasks.map((task,t) =>
-                                            <List.Item key={t}>{ task }</List.Item>
-                                        )}
-                                        </List>
-                                    </Container>
+                                    <List bulleted>
+                                    { date.tasks.map((task,t) =>
+                                        <List.Item key={t}>{ task }</List.Item>
+                                    )}
+                                    </List>
                                 </Container>
                             }
                         </Transition.Group>

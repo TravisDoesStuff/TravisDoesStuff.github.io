@@ -71,6 +71,10 @@
     margin-bottom: 30px;
 }
 
+.dateNav {
+    text-decoration: underline;
+}
+
 .action-section {
     margin-top: 15px;
 }

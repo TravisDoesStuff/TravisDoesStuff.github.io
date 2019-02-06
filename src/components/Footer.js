@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Icon, Segment, Header } from 'semantic-ui-react';
+import { Icon } from 'semantic-ui-react';
 import '../css/bio.css';
 import Links from '../data/Links';
 

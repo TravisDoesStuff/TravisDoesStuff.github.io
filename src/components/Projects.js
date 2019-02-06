@@ -109,15 +109,17 @@ class Projects extends Component {
         return (
             <Container className='projects-block'>
                 <Header as="h2">Graphics:</Header>
-                { Gallery.threedGraphics.map((media) => {
-                    return this.renderThreeMedia(media);
-                })}
-                <Container className='graphics-nav'>
-                    <Button icon color='blue' labelPosition='right' href={ 'https://github.com/TravisDoesStuff/design' } target='_blank' size='large'>
-                        More
-                        <Icon name='arrow right' />
-                    </Button>
-                </Container>
+                    <Card.Group centered>
+                        { Gallery.threedGraphics.map((media) => {
+                            return this.renderThreeMedia(media);
+                        })}
+                    </Card.Group>
+                    <Container className='graphics-nav'>
+                        <Button icon color='blue' labelPosition='right' href={ 'https://github.com/TravisDoesStuff/design' } target='_blank' size='large'>
+                            More
+                            <Icon name='arrow right' />
+                        </Button>
+                    </Container>
             </Container>
         )
     }
@@ -126,9 +128,11 @@ class Projects extends Component {
         return (
             <Container className='projects-block'>
                 <Header as="h2">Audio/Video:</Header>
-                { Gallery.audioVideo.map((audioVideo) => 
-                    this.renderVideo(audioVideo)
-                )}
+                <Card.Group centered>
+                    { Gallery.audioVideo.map((audioVideo) => 
+                        this.renderVideo(audioVideo)
+                    )}
+                </Card.Group>
             </Container>
         )
     }
@@ -147,16 +151,23 @@ class Projects extends Component {
     }
 
     renderThumbnail(media) {
-        let thumbnail = <Image src={ media.link } size={ media.size } style={{cursor: 'pointer'}} />
+        let thumbnail = <div style={{ 'backgroundImage': `url(${media.link})` }} className='project-image'>
+            <div className='project-image_overlay'>
+                <div className='mediaIcon'><Icon name='magnify' size='huge' /></div>
+            </div>
+        </div>
 
         return (
-            <div className='media-container' key={ media.id }>
+            <Card>
                 <Modal trigger={thumbnail} basic size={ media.size } centered={ false } dimmer='blurring' style={{top: '10%'}} closeIcon>
                     <Modal.Content>
                         <Image src={ media.link } style={{margin: 'auto'}} />
                     </Modal.Content>
                 </Modal>
-            </div>
+                <Card.Content>
+                    <Card.Header>{ media.title }</Card.Header>
+                </Card.Content>
+            </Card>
         )
     }
 
@@ -166,15 +177,18 @@ class Projects extends Component {
                 <div className='mediaIcon'><Icon name='youtube play' size='huge' /></div>
             </div>
         </div>
-        
+
         return (
-            <div className='media-container' key={ media.id }>
+            <Card>
                 <Modal trigger={thumbnail} basic centered={ false } dimmer='blurring' style={{top: '10%'}}>
                     <Modal.Content style={ styleModalVideo }>
                         <iframe width='500' height='300' src={ `https://www.youtube.com/embed/${media.id}` } title={ media.title } frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen style={ styleYoutubeEmbeded } />
                     </Modal.Content>
                 </Modal>
-            </div>
+                <Card.Content>
+                    <Card.Header>{ media.title }</Card.Header>
+                </Card.Content>
+            </Card>
         )
     }
 }
