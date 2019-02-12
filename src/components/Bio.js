@@ -125,7 +125,7 @@ class Bio extends Component {
                                     )}
                                 </Grid.Column>
                                 <Grid.Column>
-                                    <Button color='teal' icon labelPosition='right' as={ Link } to={ '/projects' } size='large' fluid style={{ fontWeight: 'bold' }}>
+                                    <Button color='blue' icon labelPosition='right' as={ Link } to={ '/projects' } size='large' fluid style={{ fontWeight: 'bold' }}>
                                         View my Projects <Icon name='angle right' />
                                     </Button>
                                 </Grid.Column>
