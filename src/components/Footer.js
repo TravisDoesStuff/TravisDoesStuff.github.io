@@ -34,7 +34,6 @@ class Footer extends Component {
                         <div className="footer-linkBlock" key={ link._id }><a href={ link.link } target='_blank'><Icon link name={ link.icon } />{ link.name }</a></div>
                     )}
                 </div>
-                <div>-</div>
                 <div className='copyright'>Copyright © 2018 - {currentYear} Travis Burt. All rights reserved.</div>
             </div>
         )

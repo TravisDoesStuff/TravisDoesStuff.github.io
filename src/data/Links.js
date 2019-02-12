@@ -12,7 +12,7 @@ const Links = {
             name: 'LinkedIn',
             icon: 'linkedin',
             link: 'https://www.linkedin.com/in/travisnburt/',
-            color: 'linkedin'
+            color: 'blue'
         },
         {
             _id: 'github',

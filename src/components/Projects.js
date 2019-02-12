@@ -44,10 +44,6 @@ class Projects extends Component {
                 { this.renderTitle() }
                 <div className='projects-section'>
                     { this.renderProjects() }
-                    <Divider />
-                    { this.renderGraphics() }
-                    <Divider />
-                    { this.renderAudioVideo() }
                 </div>
                 { this.renderFloor() }
             </div>
@@ -84,7 +80,7 @@ class Projects extends Component {
                             <a href={ project.link } target='_'>
                                 <div style={{ 'backgroundImage': 'url('+project.image+')' }} className='project-image'>
                                     <div className='project-image_overlay'>
-                                        <div className='mediaIcon'><Icon name='external' size='huge' /></div>
+                                        <div className='mediaIcon'><Icon name={ project.linkType } size='huge' /></div>
                                     </div>
                                 </div>
                             </a>
@@ -95,7 +91,7 @@ class Projects extends Component {
                             </Card.Content>
                             <Card.Content extra>
                                 <a href={ project.githubLink } target='_' className='project-github-link'>
-                                    <Icon name='github' />{ project.githubTitle }
+                                    <Icon name='github' /><span className='github-link'>Github:{ project.githubTitle }</span>
                                 </a>
                             </Card.Content>
                         </Card>

@@ -53,18 +53,10 @@ class Bio extends Component {
     renderName = (person) => {
         return (
             <div className='name-section'>
-                <Grid stackable columns={2}>
-                    <Grid.Column>
-                        <div className='name-block'>
-                            <div className='person-name title'>{ person.name }</div>
-                            <div className='person-title title'>{ person.title }</div>
-                            <div className='person-location title'><Icon name='map marker'/> { person.location }</div>
-                        </div>
-                    </Grid.Column>
-                    <Grid.Column>
-                        { this.renderImage() }
-                    </Grid.Column>
-                </Grid>
+                <div className='name-block'>
+                    <div className='person-name title'>{ person.name }</div>
+                    <div className='person-title title'>{ person.title }</div>
+                </div>
             </div>
         );
     }
@@ -108,13 +100,13 @@ class Bio extends Component {
                             <Grid.Row>
                                 <Grid.Column>
                                     { links.map((link) =>
-                                        <Button circular icon key={ link._id } href={ link.link } target='_blank' size='large' color={ link.color }>
+                                        <Button basic circular icon key={ link._id } href={ link.link } target='_blank' size='large' color={ link.color }>
                                             <Icon link name={ link.icon } />
                                         </Button>
                                     )}
                                 </Grid.Column>
                                 <Grid.Column>
-                                    <Button basic color='blue' icon labelPosition='right' as={ Link } to={ '/projects' } size='large' fluid style={{ fontWeight: 'bold' }}>
+                                    <Button color='blue' icon labelPosition='right' as={ Link } to={ '/projects' } size='large' fluid style={{ fontWeight: 'bold' }}>
                                         Projects
                                         <Icon name='angle right' />
                                     </Button>
@@ -127,13 +119,13 @@ class Bio extends Component {
                             <Grid.Row>
                                 <Grid.Column>
                                     { links.map((link) =>
-                                        <Button circular icon key={ link._id } href={ link.link } target='_blank' size='large' style={{ fontWeight: 'bold' }} color={ link.color }>
+                                        <Button basic circular icon key={ link._id } href={ link.link } target='_blank' size='large' style={{ fontWeight: 'bold' }} color={ link.color }>
                                             <Icon link name={ link.icon } /> { link.name }
                                         </Button>
                                     )}
                                 </Grid.Column>
                                 <Grid.Column>
-                                    <Button basic color='blue' icon labelPosition='right' as={ Link } to={ '/projects' } size='large' fluid style={{ fontWeight: 'bold' }}>
+                                    <Button color='teal' icon labelPosition='right' as={ Link } to={ '/projects' } size='large' fluid style={{ fontWeight: 'bold' }}>
                                         View my Projects <Icon name='angle right' />
                                     </Button>
                                 </Grid.Column>

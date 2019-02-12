@@ -12,6 +12,7 @@
 }
 
 .projects-section {
+    margin-top: 15px;
     padding: 30px 0;
     background: whitesmoke;
 }
@@ -40,7 +41,7 @@
     transition: 0.3s
 }
 
-.project-github-link {
+.github-link {
     text-decoration: underline;
 }
 
