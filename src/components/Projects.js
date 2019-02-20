@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Header, Card, Icon, Image, Modal, Menu, Divider, Container, Button } from 'semantic-ui-react';
+import { Header, Card, Icon, Image, Modal, Menu, Container, Button } from 'semantic-ui-react';
 import '../css/projects.css';
 
 import ProjectList from '../data/Projects';

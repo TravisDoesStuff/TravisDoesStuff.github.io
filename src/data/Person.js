@@ -1,7 +1,6 @@
 const Person = {
     name: 'Travis Burt',
-    title: 'Developer & Designer',
-    location: 'Lafayette, CO',
+    title: 'Developer, Designer & Stuff',
     description: [
         "I was always curious in finding out how the program or game I was playing worked. I started by modding my favorite games through sound editing and then on to graphical mods. I would later learn that the skills with this hobby can be applied to a career in software development.",
         "During my first gig after college, I learned full-stack web development using JavaScript, PHP, and MySQL; including frameworks such as React.js, Redux, and Lumen. On my own, I took some time to learn how mobile applications are made in order to utilize onboard sensors and external internet services.",
@@ -22,8 +21,10 @@ const Person = {
             category: 'Libaries & Frameworks',
             skills: [
                 'React.js',
+                'Redux',
                 'Node.js',
                 'jQuery',
+                'Vue.js',
                 'Zend',
                 'Lumen',
                 'Bootstrap',
@@ -56,15 +57,6 @@ const Person = {
         }
     ],
     history: [
-        {
-            startDate: 'Jul 2018',
-            title: 'Relocated to Colorado',
-            icon: 'truck',
-            description: 'Seeking new adventures and opportunities.',
-            tasks: [
-
-            ]
-        },
         {
             startDate: 'Feb 2015',
             endDate: 'Jun 2018',
