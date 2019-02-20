@@ -53,21 +53,9 @@ class Projects extends Component {
     renderTitle() {
         return (
             <div className='projects-header'>
-                <div className='project-title title'>Projects</div>
+                <div className='project-title title'>Personal Projects</div>
             </div>
         );
-    }
-
-    renderNav() {
-        return (
-            <div className='nav-section'>
-                <Menu fluid widths={3}>
-                    <Menu.Item>Development</Menu.Item>
-                    <Menu.Item>Graphics</Menu.Item>
-                    <Menu.Item>Audio/Video</Menu.Item>
-                </Menu>
-            </div>
-        )
     }
 
     renderProjects() {
