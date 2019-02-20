@@ -3,8 +3,8 @@ const Person = {
     title: 'Developer, Designer & Stuff',
     description: [
         "I was always curious in finding out how the program or game I was playing worked. I started by modding my favorite games through sound editing and then on to graphical mods. I would later learn that the skills with this hobby can be applied to a career in software development.",
-        "During my first gig after college, I learned full-stack web development using JavaScript, PHP, and MySQL; including frameworks such as React.js, Redux, and Lumen. On my own, I took some time to learn how mobile applications are made in order to utilize onboard sensors and external internet services.",
-        "Outside of work, I enjoy my time playing video games, exploring the mountains and city, or expressing my creative side through drawing, audio editing, and computer graphics.",
+        "Previously I worked as a full-stack developer working with technologies such as JavaScript, PHP, and MySQL; including some frameworks such as React.js, Redux, and Lumen. On my own time I have been learning mobile development and Vue.js in order to visualize data to users. I have also been learning UX Design to further enhance my skills in visual design to user interaction.",
+        "Outside of work, I enjoy my time playing Pokemon Go, exploring the open spaces, or expressing my creative side through drawing, audio editing, and computer graphics.",
     ],
     skills: [
         {
