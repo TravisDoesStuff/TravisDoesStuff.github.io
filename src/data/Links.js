@@ -4,7 +4,7 @@ const Links = {
             _id: 'resume',
             name: 'Resume',
             icon: 'file alternate outline',
-            link: 'https://drive.google.com/file/d/195AsV4zdCNBPQOaPI8UfPhiqkoGmTE4u/view?usp=sharing',
+            link: 'https://docs.google.com/document/d/1D1ZyVAOW7fQwWDHdIfCHWx5LZGPoMvCB5ri_LAWyVbE/view?usp=sharing',
             color: 'red'
         },
         {

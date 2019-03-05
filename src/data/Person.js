@@ -20,11 +20,10 @@ const Person = {
         {
             category: 'Libaries & Frameworks',
             skills: [
-                'React.js',
-                'Redux',
+                'React',
                 'Node.js',
                 'jQuery',
-                'Vue.js',
+                'Vue',
                 'Zend',
                 'Lumen',
                 'Bootstrap',
@@ -58,13 +57,13 @@ const Person = {
     ],
     history: [
         {
-            startDate: 'Feb 2015',
-            endDate: 'Jun 2018',
+            startDate: '2015',
+            endDate: '2018',
             title: 'Oberd - Universal Research Solutions',
             icon: 'briefcase',
             description: 'Oberd is a software as a service (SaaS) healthcare application. Primarily focused on outcomes, how a patient recovers after an operation. Also provides data management for clinical appointments, healthcare studies, and enhanced doctor-to-patient interaction.',
             tasks: [
-                'Developed product activation and administration tool with React.js & Redux. Account management turnaround times reduced from hours to minutes and reduced client tasks for development team.',
+                'Developed product activation and administration tool with React. Account management turnaround times reduced from hours to minutes and reduced client tasks for development team.',
                 'Took ownership of Patient Satisfaction product, optimization of CakePHP code and database queries reduced report time from minutes to seconds, enhancing client retention and product sales.',
                 'Converted backend data management system to Lumen-based RESTful API and AWS S3.',
                 'Collaborated with developers to establish coding practices to improve maintainability of code-base.',
@@ -72,8 +71,8 @@ const Person = {
             ]
         },
         {
-            startDate: 'Aug 2011',
-            endDate: 'Dec 2014',
+            startDate: '2011',
+            endDate: '2014',
             title: 'University of Missouri - Columbia',
             icon: 'graduation cap',
             description: 'BS in Information Technology; Minors in Computer Science, and Business',
@@ -83,8 +82,8 @@ const Person = {
             ]
         },
         {
-            startDate: 'Aug 2009',
-            endDate: 'May 2011',
+            startDate: '2009',
+            endDate: '2011',
             title: 'Richland Community College',
             icon: 'book',
             description: 'General Education, transfer to MU later.',
