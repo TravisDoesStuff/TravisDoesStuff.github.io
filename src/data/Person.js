@@ -57,6 +57,16 @@ const Person = {
     ],
     history: [
         {
+            startDate: '2019',
+            endDate: 'Present',
+            title: 'Franklin Energy',
+            icon: 'briefcase',
+            description: '',
+            tasks: [
+
+            ]
+        },
+        {
             startDate: '2015',
             endDate: '2018',
             title: 'Oberd - Universal Research Solutions',
