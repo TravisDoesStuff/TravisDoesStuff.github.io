@@ -14,18 +14,18 @@ const Person = {
                 'PHP',
                 'HTML5',
                 'CSS3',
-                'MySQL'
+                'MySQL',
+                'Apache Cassandra',
             ]
         },
         {
             category: 'Libaries & Frameworks',
             skills: [
                 'React',
-                'Node.js',
-                'jQuery',
                 'Vue',
+                'jQuery',
+                'Node.js',
                 'Zend',
-                'Lumen',
                 'Bootstrap',
                 'Semantic UI',
                 'Material UI'
@@ -35,12 +35,11 @@ const Person = {
             category: 'Tools',
             skills: [
                 'Git / Github',
+                'Atlassian Jira / Bitbucket',
+                'Docker',
                 'Postman',
                 'Amazon Web Services',
-                'Docker',
-                'Photoshop CC',
-                'Illustrator CC',
-                'After Effects CC'
+                'Adobe Creative Cloud',
             ]
         },
         {
@@ -61,9 +60,11 @@ const Person = {
             endDate: 'Present',
             title: 'Franklin Energy',
             icon: 'briefcase',
-            description: '',
+            description: 'Franklin Energy integrates with electrical and gas utility companies to provide advice to residential and commercial customers on energy savings. Through self reporting surveys regarding their building and lifestyle, tips are provided on actions customers can perform to save more financially, reduce carbon emissions, and improve local environmental health. Customers will see the results of their actions over time and be rewarded in ways to save even more in the long term.',
             tasks: [
-
+                'Continuously update user-interface to ensure that customers understand their data in order to make informed decisions.',
+                'Accelerated massive data imports through code optimization and data refining scripts.',
+                'Directly communicated with clients in order to understand requirements at both technical and design levels.',
             ]
         },
         {
@@ -96,7 +97,7 @@ const Person = {
             endDate: '2011',
             title: 'Richland Community College',
             icon: 'book',
-            description: 'General Education, transfer to MU later.',
+            description: 'General Education',
             tasks: [
                 
             ]
