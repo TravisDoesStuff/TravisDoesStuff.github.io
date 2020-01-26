@@ -119,13 +119,13 @@ class Bio extends Component {
                             <Grid.Row>
                                 <Grid.Column>
                                     { links.map((link) =>
-                                        <Button basic circular icon key={ link._id } href={ link.link } target='_blank' size='large' style={{ fontWeight: 'bold' }} color={ link.color }>
+                                        <Button basic circular icon key={ link._id } href={ link.link } target='_blank' size='large' style={{ fontWeight: 'bold' }} color={ link.color } onClick={ this.handleButtonClick }>
                                             <Icon link name={ link.icon } /> { link.name }
                                         </Button>
                                     )}
                                 </Grid.Column>
                                 <Grid.Column>
-                                    <Button color='blue' icon labelPosition='right' as={ Link } to={ '/projects' } size='large' fluid style={{ fontWeight: 'bold' }}>
+                                    <Button color='blue' icon labelPosition='right' as={ Link } to={ '/projects' } size='large' fluid style={{ fontWeight: 'bold' }} onClick={ this.handleButtonClick }>
                                         View my Projects <Icon name='angle right' />
                                     </Button>
                                 </Grid.Column>
@@ -146,6 +146,10 @@ class Bio extends Component {
         } else {
             return null;
         }
+    }
+
+    handleButtonClick = () => {
+        this.props.changeActivePage('projects');
     }
 }
 

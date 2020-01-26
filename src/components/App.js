@@ -9,6 +9,29 @@ import Footer from './Footer';
 import '../css/app.css';
 
 class App extends Component {
+  
+  constructor(props) {
+    super(props);
+
+    this.handler = this.changeActivePage.bind(this);
+  }
+
+  changeActivePage = (page) => {
+    this.setState({
+      activeItem: page
+    });
+  }
+
+  componentWillMount = () => {
+    this.setState({activeItem: this.getActiveItem()}) // set button on page load
+  }
+
+  getActiveItem = () => {
+    let urls = window.location.href.split("/");
+    let currentPage = urls[urls.length - 1];
+    return currentPage ? currentPage : 'bio';
+  }
+
   render() {
     return (
       <div className="App">
@@ -21,7 +44,7 @@ class App extends Component {
 
   renderHeader() {
     return (
-      <Header />
+      <Header changeActivePage={this.changeActivePage} activeItem={this.state.activeItem} />
     )
   }
 
@@ -29,8 +52,8 @@ class App extends Component {
     return (
       <HashRouter>
         <Switch>
-          <Route exact path="/" component={Bio} />
-          <Route exact path="/projects" component={Projects} />
+          <Route exact path="/" component={ (props) => <Bio {...props} changeActivePage={this.changeActivePage} /> } />
+          <Route exact path="/projects" component={ (props) => <Projects {...props} changeActivePage={this.changeActivePage} /> }/>
         </Switch>
       </HashRouter>
     )

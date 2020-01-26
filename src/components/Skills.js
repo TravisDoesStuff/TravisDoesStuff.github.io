@@ -17,7 +17,7 @@ class Skills extends Component {
                                     <Header as="h4">{ skillCategory.category }</Header>
                                 
                                     { skillCategory.skills.map((skill,i) =>
-                                        <Label key={i}>{ skill }</Label>
+                                        <Label key={i} style={{'cursor': 'default'}}>{ skill }</Label>
                                     )}
                                 </div>
                             </Grid.Column>

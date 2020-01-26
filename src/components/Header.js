@@ -3,15 +3,14 @@ import { HashRouter, Link } from 'react-router-dom';
 import { Menu, Grid, Dropdown, Responsive } from 'semantic-ui-react';
 
 const menuItems = [
-    { key:'', name:'Bio', link:'/' },
-    { key:'', name:'Projects', link:'/projects' }
+    { key:'', name:'bio', link:'/' },
+    { key:'', name:'projects', link:'/projects' }
 ]
 
 class Header extends Component {
-    state = { activeItem: 'Bio' };
 
     render = () => {
-        let activeItem = this.state.activeItem;
+        let activeItem = this.props.activeItem;
 
         return (
             <div className='App-header'>
@@ -55,7 +54,7 @@ class Header extends Component {
     }
 
     handleMenuClick = (e, {name}) => {
-        this.setState({ activeItem: name });
+        this.props.changeActivePage(name);
     }
 }
 
