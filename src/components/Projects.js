@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Header, Card, Icon, Image, Modal, Menu, Container, Button } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
+import { Header, Card, Icon, Image, Modal, Container, Button, Grid, Responsive, Divider } from 'semantic-ui-react';
 import '../css/projects.css';
 
 import ProjectList from '../data/Projects';
@@ -43,6 +44,8 @@ class Projects extends Component {
             <div>
                 { this.renderTitle() }
                 <div className='projects-section'>
+                    { this.renderActions() }
+                    <Divider />
                     { this.renderProjects() }
                 </div>
                 { this.renderFloor() }
@@ -53,9 +56,42 @@ class Projects extends Component {
     renderTitle() {
         return (
             <div className='projects-header'>
-                <div className='project-title title'>Personal Projects</div>
+                <div className='project-title title'>Projects</div>
             </div>
         );
+    }
+
+    renderActions() {
+        return(
+            <div>
+                <Container>
+                    <Responsive maxWidth={Responsive.onlyComputer.minWidth} className='action-row about-section' >
+                        <Button color='blue' icon labelPosition='left' floated='right' as={ Link } to={ '/' } size='large' fluid style={{ fontWeight: 'bold' }} onClick={ this.handleButtonClick }>
+                            Back to Bio
+                            <Icon name='angle left' /> 
+                        </Button>
+                    </Responsive>
+                    <Responsive minWidth={Responsive.onlyComputer.minWidth} className='action-row' >
+                        <Grid columns={3}>
+                            <Grid.Row>
+                                <Grid.Column></Grid.Column>
+                                <Grid.Column></Grid.Column>
+                                <Grid.Column>
+                                    <Button color='blue' icon labelPosition='left' floated='right' as={ Link } to={ '/' } size='large' fluid style={{ fontWeight: 'bold' }} onClick={ this.handleButtonClick }>
+                                        Back to Bio
+                                        <Icon name='angle left' /> 
+                                    </Button>
+                                </Grid.Column>
+                            </Grid.Row>
+                        </Grid>
+                    </Responsive>
+                </Container>
+            </div>
+        )
+    }
+
+    handleButtonClick = () => {
+        this.props.changeActivePage('bio');
     }
 
     renderProjects() {
