@@ -67,7 +67,7 @@ class Projects extends Component {
                 <Container>
                     <Responsive maxWidth={Responsive.onlyComputer.minWidth} className='action-row about-section' >
                         <Button color='blue' icon labelPosition='left' floated='right' as={ Link } to={ '/' } size='large' fluid style={{ fontWeight: 'bold' }} onClick={ this.handleButtonClick }>
-                            Back to Bio
+                            Return Home
                             <Icon name='angle left' /> 
                         </Button>
                     </Responsive>
@@ -78,7 +78,7 @@ class Projects extends Component {
                                 <Grid.Column></Grid.Column>
                                 <Grid.Column>
                                     <Button color='blue' icon labelPosition='left' floated='right' as={ Link } to={ '/' } size='large' fluid style={{ fontWeight: 'bold' }} onClick={ this.handleButtonClick }>
-                                        Back to Bio
+                                        Return Home
                                         <Icon name='angle left' /> 
                                     </Button>
                                 </Grid.Column>
@@ -91,7 +91,7 @@ class Projects extends Component {
     }
 
     handleButtonClick = () => {
-        this.props.changeActivePage('bio');
+        this.props.changeActivePage('about');
     }
 
     renderProjects() {

@@ -29,7 +29,7 @@ class App extends Component {
   getActiveItem = () => {
     let urls = window.location.href.split("/");
     let currentPage = urls[urls.length - 1];
-    return currentPage ? currentPage : 'bio';
+    return currentPage ? currentPage : 'about';
   }
 
   render() {

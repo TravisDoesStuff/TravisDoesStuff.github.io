@@ -66,7 +66,7 @@ class Bio extends Component {
             <div className='about-section'>
                 <Divider />
                 <Container className='about-me'>
-                    <Header as='h2'>About me</Header>
+                    <Header as='h2'>About</Header>
                     <div className='aboutParagraph'>
                         { person.description.map((paragraph,p) => 
                             <p key={p}>{ paragraph }</p>

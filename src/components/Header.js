@@ -3,8 +3,8 @@ import { HashRouter, Link } from 'react-router-dom';
 import { Menu, Grid, Dropdown, Responsive } from 'semantic-ui-react';
 
 const menuItems = [
-    { key:'', name:'bio', link:'/' },
-    { key:'', name:'projects', link:'/projects' }
+    { key:'', name:'about', label: 'About', link:'/' },
+    { key:'', name:'projects', label: 'Projects', link:'/projects' }
 ]
 
 class Header extends Component {
@@ -41,7 +41,7 @@ class Header extends Component {
                                 <Dropdown.Menu style={{ left:'auto', right:0 }}>
                                     { menuItems.map((menuItem,m) =>
                                         <HashRouter key={m}>
-                                            <Dropdown.Item active={ activeItem===menuItem.name } name={ menuItem.name } onClick={ this.handleMenuClick } as={Link} to={ menuItem.link }>{ menuItem.name }</Dropdown.Item>
+                                            <Dropdown.Item active={ activeItem===menuItem.name } name={ menuItem.name } onClick={ this.handleMenuClick } as={Link} to={ menuItem.link }>{ menuItem.label }</Dropdown.Item>
                                         </HashRouter>
                                     )}
                                 </Dropdown.Menu>
