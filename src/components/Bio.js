@@ -14,7 +14,7 @@ class Bio extends Component {
         this.state = { person: [], links: [] }
     }
 
-    componentWillMount() {
+    componentDidMount() {
         this.fetchPerson();
         this.fetchLinks();
     }

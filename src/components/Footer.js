@@ -9,7 +9,7 @@ class Footer extends Component {
         this.state = { links: [] }
     }
 
-    componentWillMount() {
+    componentDidMount() {
         this.fetchLinks();
     }
 

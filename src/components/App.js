@@ -14,16 +14,15 @@ class App extends Component {
     super(props);
 
     this.handler = this.changeActivePage.bind(this);
+    this.state = {
+      activeItem: this.getActiveItem()
+    }
   }
 
   changeActivePage = (page) => {
     this.setState({
       activeItem: page
     });
-  }
-
-  componentWillMount = () => {
-    this.setState({activeItem: this.getActiveItem()}) // set button on page load
   }
 
   getActiveItem = () => {

@@ -26,7 +26,7 @@ class Projects extends Component {
         this.state = { projects: [] };
     }
 
-    componentWillMount() {
+    componentDidMount() {
         this.fetchProjects();
     }
 
