@@ -37,17 +37,22 @@
 
       <div class='backup-page'>
         <div class='backup-content links'>
-          <a class='linkButton resume' href='https://docs.google.com/document/d/1D1ZyVAOW7fQwWDHdIfCHWx5LZGPoMvCB5ri_LAWyVbE/view?usp=sharing'>Resume</a>
-          <a class='linkButton linkedin' href='https://www.linkedin.com/in/travisnburt/'>LinkedIn</a>
-          <a class='linkButton github' href='https://github.com/TravisDoesStuff'>Github</a>
+          <div class='buttons-flex'>
+            <a class='linkButton resume' href='https://docs.google.com/document/d/1D1ZyVAOW7fQwWDHdIfCHWx5LZGPoMvCB5ri_LAWyVbE/view?usp=sharing'>Resume</a>
+            <a class='linkButton linkedin' href='https://www.linkedin.com/in/travisnburt/'>LinkedIn</a>
+            <a class='linkButton github' href='https://github.com/TravisDoesStuff'>Github</a>
+          </div>
+          <div class='buttons-flex projectslink-section'>
+            <a class='linkButton projectslink' href='#projects'>View My Projects</a>
+          </div>
         </div>
 
         <hr>
 
         <div class='backup-content about'>
           <h2>About</h2>
-          <div class='about-text'>
-            <p>Technology has always been at the front of enhancing the human experience. As people become more connected, information is easier than ever to access and it is important for interfaces to be intuitive for users to find what they are looking for.</p>
+          <div class='container'>
+            <p>Technology has always been the forefront of enhancing the human experience. As people become more connected, information is easier than ever to access and it is important for interfaces to be intuitive for users to find what they are looking for.</p>
             <p>Inspiration for my career in software development first came about from folks modifying computer games from seriousness to something silly. I wanted to try something similar and started to browse and modify sound-bytes within my favorite games to make them how I want. As time went on I delved into modifying graphics, models, and eventually learned about programming.</p>
             <p>So far in my career I have been handling large data sets to present users how they are recovering following a medical procedure, or showing how utility customers are reducing their carbon footprint over time. Overall my passion is providing information to people to learn from and help with decision making, software development is the perfect means of doing so in a connected world.</p>
             <p>Outside of development I have been exploring virtual worlds through VR gaming; although I still haven’t forgotten about the real-world (yet) and equally enjoy explore local places and getting to know folks all around both inside and outside the software development industry. I also enjoy expressing my creative side through computer graphics, 3D modeling, and drawing...anything that brings thoughts to life.</p>
@@ -112,38 +117,110 @@
 
         <div class='backup-content timeline'>
           <h2>Timeline</h2>
-          <h3>2019 - Present -- Franklin Energy</h3>
-          <p>Franklin Energy integrates with utility companies to provide advice to both residential and commercial customers on energy savings. Through self-reporting surveys regarding their building and lifestyle, tips are provided on actions customers can perform to save more financially, reduce carbon emissions, and improve local health.</p>
-          <ul>
-            <li>'Continuously update user-interface to ensure that customers understand their data in order to make informed decisions.</li>
-            <li>Accelerated massive data imports through code optimization and data refining scripts.</li>
-            <li>Directly communicated with clients in order to understand requirements at both technical and design levels.</li>
-          </ul>
-          <h3>2015 - 2018 -- Oberd - Universal Research Solutions</h3>
-          <p>Oberd is a healthcare based application primarily focused on outcomes, or how a patient benefits in their life after a medical procedure. Data management tools are also provided to clinics to schedule appointments and conduct studies.</p>
-          <ul>
-            <li>Developed product activation and administration tool with React. Account management turnaround times reduced from hours to minutes and reduced client tasks for development team.</li>
-            <li>Took ownership of Patient Satisfaction product, optimization of CakePHP code and database queries reduced report time from minutes to seconds, enhancing client retention and product sales.</li>
-            <li>Converted backend data management system to Lumen-based RESTful API and AWS S3.</li>
-            <li>Collaborated with developers to establish coding practices to improve maintainability of code-base.</li>
-            <li>Maintained clinical management application, utilizing a Kanban system to add requested features and resolve defects; continuous deployment through Codeship to Amazon Web Services (AWS).</li>
-          </ul>
-          <h3>2011 - 2014 -- University of Missouri - Columbia</h3>
-          <p>BS in Information Technology; Minors in Computer Science, and Business.</p>
-          <ul>
-            <li>Dean's List</li>
-            <li>Missouri Computing Association</li>
-          </ul>
-          <h3>2009 - 2011 -- Richland Community College</h3>
-          <p>General Studies</p>
+          <div class='container'>
+            <h3>2019 - Present -- Franklin Energy</h3>
+            <p>Franklin Energy integrates with utility companies to provide advice to both residential and commercial customers on energy savings. Through self-reporting surveys regarding their building and lifestyle, tips are provided on actions customers can perform to save more financially, reduce carbon emissions, and improve local health.</p>
+            <ul>
+              <li>Continuously update user-interface to ensure that customers understand their data in order to make informed decisions.</li>
+              <li>Accelerated massive data imports through code optimization and data refining scripts.</li>
+              <li>Directly communicated with clients in order to understand requirements at both technical and design levels.</li>
+            </ul>
+            <h3>2015 - 2018 -- Oberd - Universal Research Solutions</h3>
+            <p>Oberd is a healthcare based application primarily focused on outcomes, or how a patient benefits in their life after a medical procedure. Data management tools are also provided to clinics to schedule appointments and conduct studies.</p>
+            <ul>
+              <li>Developed product activation and administration tool with React. Account management turnaround times reduced from hours to minutes and reduced client tasks for development team.</li>
+              <li>Took ownership of Patient Satisfaction product, optimization of CakePHP code and database queries reduced report time from minutes to seconds, enhancing client retention and product sales.</li>
+              <li>Converted backend data management system to Lumen-based RESTful API and AWS S3.</li>
+              <li>Collaborated with developers to establish coding practices to improve maintainability of code-base.</li>
+              <li>Maintained clinical management application, utilizing a Kanban system to add requested features and resolve defects; continuous deployment through Codeship to Amazon Web Services (AWS).</li>
+            </ul>
+            <h3>2011 - 2014 -- University of Missouri - Columbia</h3>
+            <p>BS in Information Technology; Minors in Computer Science, and Business.</p>
+            <ul>
+              <li>Dean's List</li>
+              <li>Missouri Computing Association</li>
+            </ul>
+            <h3>2009 - 2011 -- Richland Community College</h3>
+            <p>General Studies</p>
+          </div>
         </div>
 
         <hr>
 
-        <div class='backup-content projects'>
+        <div class='backup-content projects' id='projects'>
           <h2>Projects</h2>
+          <div class='container project-container'>
+            <dev class='card-sleeve'>
+              <div class='project-card'>
+                <div class='card-image' style="background-image: url(https://github.com/TravisDoesStuff/WeatherMapComparison/raw/master/compareDemo.png)"></div>
+                <div class='card-text'>
+                  <div class='card-title'>Cloud2Ground</div>
+                  <div class='card-sub'>Vue.js + Leaflet + Weather APIs</div>
+                  <div class='card-desc'>Vue application allowing users to compare weather and climate data between two points on Earth.</div>
+                </div>
+                <div class='card-link'><a href="https://github.com/TravisDoesStuff/WeatherMapComparison" target="_">Github: WeatherMapComparison</span></a></div>
+              </div>
+            </dev>
+            <div class='card-sleeve'>
+              <div class='project-card'>
+                <div class='card-image' style="background-image: url(https://github.com/TravisDoesStuff/TerrainGenerator/raw/master/coolTerrain.jpg)"></div>
+                <div class='card-text'>
+                  <div class='card-title'>Map Creator</div>
+                  <div class='card-sub'>Procedural Generation</div>
+                  <div class='card-desc'>Modified Square-Diamond Algorithm creates procedurally generated height maps.</div>
+                </div>
+                <div class='card-link'><a href="https://github.com/TravisDoesStuff/TerrainGenerator" target="_">Github: TerrainGenerator</span></a></div>
+              </div>
+            </div>
+            <div class='card-sleeve'>
+              <div class='project-card'>
+                <div class='card-image' style="background-image: url(https://github.com/TravisDoesStuff/procGen/raw/master/preview.png)"></div>
+                <div class='card-text'>
+                  <div class='card-title'>Terrain Generator</div>
+                  <div class='card-sub'>Procedural Generation</div>
+                  <div class='card-desc'>Utilizes the Midpoint Displacement algorithm to create randomly generated terrain often seen in video games.</div>
+                </div>
+                <div class='card-link'><a href="https://github.com/TravisDoesStuff/procGen" target="_">Github: procGen</span></a></div>
+              </div>
+            </div>
+            <div class='card-sleeve'>
+              <div class='project-card'>
+                <div class='card-image' style="background-image: url(https://github.com/TravisDoesStuff/WeatherStation/raw/master/screenshot.png)"></div>
+                <div class='card-text'>
+                  <div class='card-title'>Weather Station Model</div>
+                  <div class='card-sub'>Professional Weather Diagrams</div>
+                  <div class='card-desc'>Android application giving current weather data to user based on meteorological station diagrams.</div>
+                </div>
+                <div class='card-link'><a href="https://github.com/TravisDoesStuff/WeatherStation" target="_">Github: WeatherStation</span></a></div>
+              </div>
+            </div>
+            <div class='card-sleeve'>
+              <div class='project-card'>
+                <div class='card-image' style="background-image: url(https://github.com/TravisDoesStuff/RotationClock/raw/master/preview.png)"></div>
+                <div class='card-text'>
+                  <div class='card-title'>Rotation Clock</div>
+                  <div class='card-sub'>Spinning Polar Clock</div>
+                  <div class='card-desc'>Abstract clock displaying system time.</div>
+                </div>
+                <div class='card-link'><a href="https://github.com/TravisDoesStuff/RotationClock/" target="_">Github: RotationClock</span></a></div>
+              </div>
+            </div>
+            <div class='card-sleeve'>
+              <div class='project-card'>
+                <div class='card-image' style="background-image: url(https://github.com/TravisDoesStuff/Rorschach/raw/master/rorschach_readme.jpg)"></div>
+                <div class='card-text'>
+                  <div class='card-title'>Rorschach</div>
+                  <div class='card-sub'>MERN-stack Inkblot Test</div>
+                  <div class='card-desc'>MERN-stack application where users were presented official inkblots and they inputted what they saw. They can then compare their results with other users.</div>
+                </div>
+                <div class='card-link'><a href="https://github.com/TravisDoesStuff/Rorschach" target="_">Github: Rorschach</span></a></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+      <div class='separator'></div>
+      <div class='footer-background'></div>
       <div class='footer'>
         <p>Copyright © 2018 - 2020 Travis Burt. All rights reserved.</p>
       </div>
